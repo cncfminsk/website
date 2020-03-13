@@ -1,4 +1,6 @@
-# Cncfminsk
+# Cncfminsk 
+
+[![build status](https://github.com/cncfminsk/cncfminsk-web/workflows/Build/badge.svg)](https://github.com/cncfminsk/cncfminsk-web/actions)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
 
