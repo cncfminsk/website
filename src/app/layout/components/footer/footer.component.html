@@ -1,1 +1,61 @@
-
+<div class="layout-footer-content" nz-row nzType="flex" nzAlign="top">
+  <div nz-col nzSpan="4">
+    <div nz-row nzType="flex" nzJustify="start">
+      <img
+        class="layout-footer-logo"
+        src="/assets/images/logo_white.svg"
+        alt="logo"
+      />
+    </div>
+  </div>
+  <div nz-col nzSpan="2"></div>
+  <div nz-col nzSpan="18">
+    <div nz-row nzType="flex" nzJustify="end">
+      <div class="layout-footer-info" nz-col nzSpan="4">
+        <nz-list
+          [nzDataSource]="dataAboutUs"
+          [nzHeader]="'О нас' | uppercase"
+          [nzRenderItem]="dataAboutItem"
+          [nzSplit]="false"
+          [nzGrid]="{ span: 24 }"
+        >
+          <ng-template #dataAboutItem let-item>
+            <nz-list-item [nzContent]="itemAboutLink">
+              <ng-template #itemAboutLink>
+                <a
+                  class="layout-footer-link"
+                  [href]="item.link"
+                  target="_blank"
+                  >{{ item.title }}</a
+                >
+              </ng-template>
+            </nz-list-item>
+          </ng-template>
+        </nz-list>
+      </div>
+      <div nz-col nzSpan="1"></div>
+      <div class="layout-footer-social" nz-col nzSpan="4">
+        <nz-list
+          [nzDataSource]="dataSocialMedia"
+          [nzHeader]="'Подписывайся' | uppercase"
+          [nzRenderItem]="dataSocialItem"
+          [nzSplit]="false"
+          [nzGrid]="{ span: 12 }"
+        >
+          <ng-template #dataSocialItem let-item>
+            <nz-list-item [nzContent]="itemSocialLink">
+              <ng-template #itemSocialLink>
+                <a
+                  class="layout-footer-link"
+                  [href]="item.link"
+                  target="_blank"
+                  >{{ item.title }}</a
+                >
+              </ng-template>
+            </nz-list-item>
+          </ng-template>
+        </nz-list>
+      </div>
+    </div>
+  </div>
+</div>
