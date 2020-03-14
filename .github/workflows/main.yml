@@ -29,11 +29,11 @@ jobs:
           npm ci
           npm run build:ci
       - name: set bucket name
-        if: ${ GITHUB_REF##*/ } == "dev"
+        if: ${{ GITHUB_REF##*/ }} == "dev"
         run: |
           export BUCKET='dev.cnsfminsk.io'
       - name: set bucket name
-        if: ${ GITHUB_REF##*/ } == "master"
+        if: ${{ GITHUB_REF##*/ }} == "master"
         run: |
           export BUCKET='www.cnsfminsk.io'
       - name: upload to ${GITHUB_REF##*/} GCS 
