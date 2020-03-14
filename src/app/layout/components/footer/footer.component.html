@@ -8,7 +8,8 @@
       />
     </div>
   </div>
-  <div nz-col nzSpan="20">
+  <div nz-col nzSpan="2"></div>
+  <div nz-col nzSpan="18">
     <div nz-row nzType="flex" nzJustify="end">
       <div class="layout-footer-info" nz-col nzSpan="4">
         <nz-list
@@ -32,13 +33,14 @@
           </ng-template>
         </nz-list>
       </div>
+      <div nz-col nzSpan="1"></div>
       <div class="layout-footer-social" nz-col nzSpan="4">
         <nz-list
           [nzDataSource]="dataSocialMedia"
           [nzHeader]="'Подписывайся' | uppercase"
           [nzRenderItem]="dataSocialItem"
           [nzSplit]="false"
-          [nzGrid]="{ gutter: 24, span: 12 }"
+          [nzGrid]="{ span: 12 }"
         >
           <ng-template #dataSocialItem let-item>
             <nz-list-item [nzContent]="itemSocialLink">

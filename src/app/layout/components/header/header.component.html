@@ -8,9 +8,10 @@
       />
     </div>
   </div>
-  <div nz-col nzSpan="20">
+  <div nz-col nzSpan="2"></div>
+  <div nz-col nzSpan="18">
     <div nz-row nzType="flex" nzJustify="end">
-      <nz-tabset nzLinkRouter [nzTabBarGutter]="32">
+      <nz-tabset nzLinkRouter [nzTabBarGutter]="32" [nzShowPagination]="false">
         <nz-tab *ngFor="let tabItem of tabItems">
           <a nz-tab-link [routerLink]="tabItem.route">{{
             tabItem.label | uppercase
