@@ -1,5 +1,7 @@
-name: Build
-on: push
+name: Build n Upload
+on:
+  push:
+    branches: [ dev ]
 
 jobs:
   build:
@@ -26,3 +28,19 @@ jobs:
         run: |
           npm ci
           npm run build:ci
+      - name: set bucket name
+        if: ${ GITHUB_REF##*/ } == "dev"
+        run: |
+          export BUCKET='dev.cnsfminsk.io'
+      - name: set bucket name
+        if: ${ GITHUB_REF##*/ } == "master"
+        run: |
+          export BUCKET='www.cnsfminsk.io'
+      - name: upload to ${GITHUB_REF##*/} GCS 
+        uses: actions-hub/gcloud@master
+        env:
+          PROJECT_ID: ${{ secrets.GCP_PROJECT }}
+          APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          CLI: gsutil
+        with:
+          args: -m rsync -d -r dist/cncfminsk/  gs://${{ env.BUCKET }}/
