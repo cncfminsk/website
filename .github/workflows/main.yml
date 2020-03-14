@@ -28,7 +28,7 @@ jobs:
         run: |
           npm ci
           npm run build:ci
-      - name: upload to dev.cnsfminsk.io GCS 
+      - name: upload to dev.cncfminsk.io GCS 
         if: github.ref == 'refs/heads/dev'
         uses: actions-hub/gcloud@master
         env:
@@ -36,8 +36,8 @@ jobs:
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS_B64 }}
           CLI: gsutil
         with:
-          args: -m rsync -d -r dist/cncfminsk/  gs://dev.cnsfminsk.io/
-      - name: upload to www.cnsfminsk.io GCS 
+          args: -m rsync -d -r dist/cncfminsk/  gs://dev.cncfminsk.io/
+      - name: upload to www.cncfminsk.io GCS 
         if: github.ref == 'refs/heads/master'
         uses: actions-hub/gcloud@master
         env:
@@ -45,4 +45,4 @@ jobs:
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS_B64 }}
           CLI: gsutil
         with:
-          args: -m rsync -d -r dist/cncfminsk/  gs://www.cnsfminsk.io/
+          args: -m rsync -d -r dist/cncfminsk/  gs://www.cncfminsk.io/
