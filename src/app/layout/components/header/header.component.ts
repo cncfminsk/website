@@ -9,19 +9,19 @@ export class HeaderComponent {
   public tabItems = [
     {
       label: "Главная",
-      route: "/"
+      route: ["/"]
     },
     {
       label: "События",
-      route: "/"
+      route: ["/"]
     },
     {
       label: "Партнеры",
-      route: "/"
+      route: ["/"]
     },
     {
       label: "Докладчики",
-      route: "/"
+      route: ["/"]
     }
   ];
 }

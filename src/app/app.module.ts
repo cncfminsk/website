@@ -1,31 +1,34 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { LOCALE_ID, NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NZ_I18N, ru_RU } from 'ng-zorro-antd';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { registerLocaleData } from '@angular/common';
-import ru from '@angular/common/locales/ru';
-import { LayoutModule } from './layout/layout.module';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { NZ_I18N, ru_RU } from "ng-zorro-antd";
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { registerLocaleData } from "@angular/common";
+import localeRu from "@angular/common/locales/ru";
+import { LayoutModule } from "./layout/layout.module";
+import { HomePageModule } from "./home-page/home-page.module";
 
-registerLocaleData(ru);
+registerLocaleData(localeRu, "ru-RU");
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    LayoutModule
+    LayoutModule,
+    HomePageModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: ru_RU }],
+  providers: [
+    { provide: NZ_I18N, useValue: "ru_RU" },
+    { provide: LOCALE_ID, useValue: "ru-RU" }
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
