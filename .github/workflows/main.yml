@@ -1,7 +1,7 @@
 name: Build n Upload
 on:
   push:
-    branches: [ dev ]
+    branches: [ dev, master ]
 
 jobs:
   build:
