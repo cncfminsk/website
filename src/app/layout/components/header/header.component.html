@@ -1,16 +1,17 @@
-<div class="layout-header" nz-row nzType="flex" nzAlign="middle">
+<div class="layout-header-content" nz-row nzType="flex" nzAlign="middle">
   <div nz-col nzSpan="4">
     <div nz-row nzType="flex" nzJustify="start">
       <img
-        class="layout-header-logo-svg"
+        class="layout-header-logo"
         src="/assets/images/logo.svg"
         alt="logo"
       />
     </div>
   </div>
-  <div nz-col nzSpan="20">
+  <div nz-col nzSpan="2"></div>
+  <div nz-col nzSpan="18">
     <div nz-row nzType="flex" nzJustify="end">
-      <nz-tabset nzLinkRouter>
+      <nz-tabset nzLinkRouter [nzTabBarGutter]="32" [nzShowPagination]="false">
         <nz-tab *ngFor="let tabItem of tabItems">
           <a nz-tab-link [routerLink]="tabItem.route">{{
             tabItem.label | uppercase
