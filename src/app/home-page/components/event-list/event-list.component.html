@@ -1,0 +1,47 @@
+<div class="layout-content-events" nz-row nzType="flex">
+  <div class="layout-content-events-title">
+    <span>Убедись, что ты ничего не пропустишь</span>
+  </div>
+  <div class="layout-content-events-filter" nz-row nzType="flex">
+    <button
+      class="layout-content-events-filter-button"
+      nz-button
+      nzSize="large"
+      nzType="default"
+    >
+      {{ "Мастер-класс" | uppercase }}
+    </button>
+    <button
+      class="layout-content-events-filter-button"
+      nz-button
+      nzSize="large"
+      nzType="default"
+    >
+      {{ "Встреча" | uppercase }}
+    </button>
+    <button
+      class="layout-content-events-filter-button"
+      nz-button
+      nzSize="large"
+      nzType="default"
+    >
+      {{ "Дайджест" | uppercase }}
+    </button>
+  </div>
+  <div class="layout-content-events-list" nz-row nzType="flex" nzJustify="space-around">
+    <ng-container *ngFor="let eventCard of eventCards" >
+      <nz-card style="width:300px;" nzHoverable [nzBordered]="false" [nzCover]="coverTemplate" [nzActions]="[actionClick]">
+        <nz-card-meta
+          [nzTitle]="eventCard.title | uppercase"
+          [nzDescription]="eventCard.description"
+        ></nz-card-meta>
+      </nz-card>
+      <ng-template #coverTemplate>
+        <img alt="event" [src]="eventCard.imageUrl" />
+      </ng-template>
+      <ng-template #actionClick>
+        <!-- <i nz-icon nzType="setting"></i> -->
+      </ng-template>
+    </ng-container>
+  </div>
+</div>
