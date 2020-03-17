@@ -2,6 +2,7 @@
   <div class="layout-content-events-title">
     <span>Убедись, что ты ничего не пропустишь</span>
   </div>
+  <span>{{ (reviewEventData | async)?.title }}</span>
   <div class="layout-content-events-filter" nz-row nzType="flex">
     <button
       class="layout-content-events-filter-button"
@@ -28,19 +29,30 @@
       {{ "Дайджест" | uppercase }}
     </button>
   </div>
-  <div class="layout-content-events-list" nz-row nzType="flex" nzJustify="space-around">
-    <ng-container *ngFor="let eventCard of eventCards" >
-      <nz-card style="width:300px;" nzHoverable [nzBordered]="false" [nzCover]="coverTemplate" [nzActions]="[actionClick]">
+  <div
+    class="layout-content-events-list"
+    nz-row
+    nzType="flex"
+    nzJustify="space-between"
+  >
+    <ng-container *ngFor="let data of reviewEventData | async">
+      <nz-card
+        style="width:410px;"
+        nzHoverable
+        [nzBordered]="false"
+        [nzCover]="coverTemplate"
+        [nzActions]="[actionClick]"
+      >
         <nz-card-meta
-          [nzTitle]="eventCard.title | uppercase"
-          [nzDescription]="eventCard.description"
+          [nzTitle]="data?.title | uppercase"
+          [nzDescription]="data?.description"
         ></nz-card-meta>
       </nz-card>
       <ng-template #coverTemplate>
-        <img alt="event" [src]="eventCard.imageUrl" />
+        <img alt="event" [src]="data?.imageUrl" />
       </ng-template>
       <ng-template #actionClick>
-        <!-- <i nz-icon nzType="setting"></i> -->
+        <app-arrow-right-icon></app-arrow-right-icon>
       </ng-template>
     </ng-container>
   </div>

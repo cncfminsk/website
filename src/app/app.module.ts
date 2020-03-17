@@ -26,7 +26,7 @@ registerLocaleData(localeRu, "ru-RU");
     HomePageModule
   ],
   providers: [
-    { provide: NZ_I18N, useValue: "ru_RU" },
+    { provide: NZ_I18N, useValue: ru_RU },
     { provide: LOCALE_ID, useValue: "ru-RU" }
   ],
   bootstrap: [AppComponent]

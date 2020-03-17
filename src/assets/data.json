@@ -4,5 +4,34 @@
     "title": "Мелочь, а приятно: жизнь прекрасна",
     "description": "Товарищи! Новая модель организационной деятельности требуют определения и уточнения соответствующий условий активизации.",
     "imageUrl": "/assets/images/registration-picture.png"
+  },
+  "eventData": {
+    "eventMasterClassData": {
+      "title": "Мастер-класс",
+      "data": [
+        {
+          "description": "Прототип нового сервиса - это как глас грядущего поколения",
+          "imageUrl": "/assets/images/event-picture.png"
+        }
+      ]
+    },
+    "eventMeetingData": {
+      "title": "Встреча",
+      "data": [
+        {
+          "description": "Британские ученые заявили, что прототип - не панацея",
+          "imageUrl": "/assets/images/event-picture.png"
+        }
+      ]
+    },
+    "eventDigestData": {
+      "title": "Дайджест",
+      "data": [
+        {
+          "description": "Высококачественный прототип будущего проекта связывает нас",
+          "imageUrl": "/assets/images/event-picture.png"
+        }
+      ]
+    }
   }
 }
