@@ -1,7 +1,7 @@
 .layout-content-events {
   padding: 64px 160px;
   flex-direction: column;
-  min-height: 1000px;
+  min-height: 1200px;
   background-color: #ffffff;
 }
 
@@ -27,8 +27,7 @@
 }
 
 ::ng-deep .ant-card-body {
-  padding-right: 0;
-  padding-left: 0;
+  padding: 24px 0 12px 0;
 }
 
 ::ng-deep .ant-card-actions {
@@ -49,4 +48,18 @@
   font-size: 20px;
   color: #202020;
   font-family: "Open Sans", sans-serif;
+}
+
+::ng-deep .ant-btn-primary:focus,
+::ng-deep .ant-btn-primary:active {
+  background-color: #47529e;
+  border-color: #47529e;
+  color: #ffffff;
+}
+
+::ng-deep .ant-btn-default:focus,
+::ng-deep .ant-btn-default:active {
+  background-color: #ffffff;
+  border-color: #47529e;
+  color: #47529e;
 }

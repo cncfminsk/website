@@ -1,37 +1,61 @@
 {
   "registrationCardData": {
-    "date": "2020-05-17T00:00:00",
+    "date": "2020-05-17",
     "title": "Мелочь, а приятно: жизнь прекрасна",
     "description": "Товарищи! Новая модель организационной деятельности требуют определения и уточнения соответствующий условий активизации.",
     "imageUrl": "/assets/images/registration-picture.png"
   },
-  "eventData": {
-    "eventMasterClassData": {
-      "title": "Мастер-класс",
+  "eventsData": [
+    {
+      "id": "masterclass",
       "data": [
         {
+          "title": "Мастер-класс",
+          "date": "2020-09-11",
           "description": "Прототип нового сервиса - это как глас грядущего поколения",
           "imageUrl": "/assets/images/event-picture.png"
-        }
-      ]
-    },
-    "eventMeetingData": {
-      "title": "Встреча",
-      "data": [
+        },
         {
+          "title": "Мастер-класс",
+          "date": "2020-12-11",
           "description": "Британские ученые заявили, что прототип - не панацея",
           "imageUrl": "/assets/images/event-picture.png"
         }
       ]
     },
-    "eventDigestData": {
-      "title": "Дайджест",
+    {
+      "id": "meetup",
       "data": [
         {
+          "title": "Встреча",
+          "date": "2020-04-25",
+          "description": "Британские ученые заявили, что прототип - не панацея",
+          "imageUrl": "/assets/images/event-picture.png"
+        },
+        {
+          "title": "Встреча",
+          "date": "2020-06-27",
+          "description": "Прототип нового сервиса - это как глас грядущего поколения",
+          "imageUrl": "/assets/images/event-picture.png"
+        },
+        {
+          "title": "Встреча",
+          "date": "2020-05-29",
+          "description": "Высококачественный прототип будущего проекта связывает нас",
+          "imageUrl": "/assets/images/event-picture.png"
+        }
+      ]
+    },
+    {
+      "id": "digest",
+      "data": [
+        {
+          "title": "Дайджест",
+          "date": "2020-05-06",
           "description": "Высококачественный прототип будущего проекта связывает нас",
           "imageUrl": "/assets/images/event-picture.png"
         }
       ]
     }
-  }
+  ]
 }

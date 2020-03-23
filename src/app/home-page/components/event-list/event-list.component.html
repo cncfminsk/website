@@ -2,58 +2,72 @@
   <div class="layout-content-events-title">
     <span>Убедись, что ты ничего не пропустишь</span>
   </div>
-  <span>{{ (reviewEventData | async)?.title }}</span>
   <div class="layout-content-events-filter" nz-row nzType="flex">
     <button
+      *ngIf="(masterclassData | async)?.length > 0"
       class="layout-content-events-filter-button"
       nz-button
       nzSize="large"
-      nzType="default"
+      [nzType]="filterActive === masterclassTitle ? 'primary' : 'default'"
+      (click)="onFilterEventData(masterclassTitle)"
     >
-      {{ "Мастер-класс" | uppercase }}
+      {{ masterclassTitle | uppercase }}
     </button>
     <button
+      *ngIf="(meetupData | async)?.length > 0"
       class="layout-content-events-filter-button"
       nz-button
       nzSize="large"
-      nzType="default"
+      [nzType]="filterActive === meetupTitle ? 'primary' : 'default'"
+      (click)="onFilterEventData(meetupTitle)"
     >
-      {{ "Встреча" | uppercase }}
+      {{ meetupTitle | uppercase }}
     </button>
     <button
+      *ngIf="(digestData | async)?.length > 0"
       class="layout-content-events-filter-button"
       nz-button
       nzSize="large"
-      nzType="default"
+      [nzType]="filterActive === digestTitle ? 'primary' : 'default'"
+      (click)="onFilterEventData(digestTitle)"
     >
-      {{ "Дайджест" | uppercase }}
+      {{ digestTitle | uppercase }}
     </button>
   </div>
-  <div
-    class="layout-content-events-list"
-    nz-row
-    nzType="flex"
-    nzJustify="space-between"
-  >
-    <ng-container *ngFor="let data of reviewEventData | async">
-      <nz-card
-        style="width:410px;"
-        nzHoverable
-        [nzBordered]="false"
-        [nzCover]="coverTemplate"
-        [nzActions]="[actionClick]"
-      >
-        <nz-card-meta
-          [nzTitle]="data?.title | uppercase"
-          [nzDescription]="data?.description"
-        ></nz-card-meta>
-      </nz-card>
-      <ng-template #coverTemplate>
-        <img alt="event" [src]="data?.imageUrl" />
-      </ng-template>
-      <ng-template #actionClick>
-        <app-arrow-right-icon></app-arrow-right-icon>
-      </ng-template>
+  <div class="layout-content-events-list" nz-row>
+    <ng-container *ngFor="let data of filteredData | async; index as i">
+      <div nz-col nzSpan="8">
+        <div
+          nz-row
+          nzType="flex"
+          [nzJustify]="i === 0 ? 'start' : i === 1 ? 'center' : 'end'"
+        >
+          <nz-card
+            style="width:80%;"
+            nzHoverable
+            [nzBordered]="false"
+            [nzCover]="coverTemplate"
+            [nzActions]="[actionClick]"
+          >
+            <nz-card-meta
+              [nzTitle]="data?.title | uppercase"
+              [nzDescription]="descriptionTemplate"
+            ></nz-card-meta>
+          </nz-card>
+          <ng-template #coverTemplate>
+            <img alt="event" [src]="data?.imageUrl" />
+          </ng-template>
+          <ng-template #descriptionTemplate>
+            <p>
+              {{ data?.date | date: "dd-MM-yyyy" }}
+            </p>
+            <p>{{ data?.description }}</p>
+          </ng-template>
+          <ng-template #actionClick>
+            <app-arrow-right-icon></app-arrow-right-icon>
+          </ng-template>
+        </div>
+      </div>
     </ng-container>
   </div>
 </div>
