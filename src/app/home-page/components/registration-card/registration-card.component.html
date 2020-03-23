@@ -1,0 +1,48 @@
+<div class="layout-content-registration" nz-row nzType="flex" nzAlign="middle">
+  <div nz-col nzSpan="11">
+    <div
+      class="layout-content-registration-card"
+      nz-row
+      nzType="flex"
+      nzAlign="top"
+    >
+      <div class="registration-card-date">
+        {{
+          (registrationCardData | async)?.date
+            | date: "EEEE, d MMMM, y"
+            | uppercase
+        }}
+      </div>
+      <div class="registration-card-title">
+        {{ (registrationCardData | async)?.title }}
+      </div>
+      <div class="registration-card-description">
+        {{ (registrationCardData | async)?.description }}
+      </div>
+      <button
+        class="registration-card-button"
+        nz-button
+        nzSize="large"
+        nzType="default"
+        (click)="onRegistration()"
+      >
+        {{ "Зарегистрироваться" | uppercase }}
+      </button>
+    </div>
+  </div>
+  <div nz-col nzSpan="13">
+    <div
+      class="registration-card-image-container"
+      nz-row
+      nzType="flex"
+      nzJustify="start"
+      nzAlign="middle"
+    >
+      <img
+        class="registration-card-image"
+        [src]="(registrationCardData | async)?.imageUrl"
+        alt="event"
+      />
+    </div>
+  </div>
+</div>

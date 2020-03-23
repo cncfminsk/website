@@ -2,13 +2,31 @@
 
 //Overwrite ng-zorro-antd style variables
 @primary-color: #202020;
-@tabs-ink-bar-color: #47529e;
+@secondary-color: #47529e;
+
 @font-family: "Roboto", sans-serif;
 @font-size-base: 16px;
+@text-color: @primary-color;
+
+@border-radius-base: 0;
+@border-width-base: 4px;
+@border-color-base: @secondary-color;
+
+@tabs-ink-bar-color: @secondary-color;
+@tabs-horizontal-margin: 0 64px 0 0;
 
 @layout-header-background: #f0f5f7;
 @layout-header-height: 145px;
 @layout-header-padding: 0 160px;
 
-@layout-footer-background: #202020;
+@layout-footer-background: @primary-color;
 @layout-footer-padding: 56px 160px;
+
+@btn-default-color: @secondary-color;
+@btn-default-bg: @white;
+@btn-primary-color: @white;
+@btn-primary-bg: @secondary-color;
+@btn-font-weight: bold;
+@btn-font-size-lg: 20px;
+
+@card-actions-background: @white;
