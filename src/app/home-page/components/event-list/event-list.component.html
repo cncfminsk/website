@@ -7,7 +7,7 @@
       *ngIf="(masterclassData | async)?.length > 0"
       class="layout-content-events-filter-button"
       nz-button
-      nzSize="large"
+      nzSize="small"
       [nzType]="filterActive === masterclassTitle ? 'primary' : 'default'"
       (click)="onFilterEventData(masterclassTitle)"
     >
@@ -17,7 +17,7 @@
       *ngIf="(meetupData | async)?.length > 0"
       class="layout-content-events-filter-button"
       nz-button
-      nzSize="large"
+      nzSize="small"
       [nzType]="filterActive === meetupTitle ? 'primary' : 'default'"
       (click)="onFilterEventData(meetupTitle)"
     >
@@ -27,7 +27,7 @@
       *ngIf="(digestData | async)?.length > 0"
       class="layout-content-events-filter-button"
       nz-button
-      nzSize="large"
+      nzSize="small"
       [nzType]="filterActive === digestTitle ? 'primary' : 'default'"
       (click)="onFilterEventData(digestTitle)"
     >
