@@ -34,20 +34,15 @@
       {{ digestTitle | uppercase }}
     </button>
   </div>
-  <div class="layout-content-events-list" nz-row>
-    <ng-container *ngFor="let data of filteredData | async; index as i">
+  <div class="layout-content-events-list">
+    <ng-container *ngFor="let data of filteredData | async">
       <div nz-col nzSpan="8">
-        <div
-          nz-row
-          nzType="flex"
-          [nzJustify]="i === 0 ? 'start' : i === 1 ? 'center' : 'end'"
-        >
+        <div class="layout-content-events-item-container" nz-row nzType="flex">
           <nz-card
-            style="width:80%;"
+            class="layout-content-events-item"
             nzHoverable
             [nzBordered]="false"
             [nzCover]="coverTemplate"
-            [nzActions]="[actionClick]"
           >
             <nz-card-meta
               [nzTitle]="data?.title | uppercase"
@@ -55,16 +50,23 @@
             ></nz-card-meta>
           </nz-card>
           <ng-template #coverTemplate>
-            <img alt="event" [src]="data?.imageUrl" />
+            <img [src]="data?.imageUrl" alt="event" />
           </ng-template>
           <ng-template #descriptionTemplate>
-            <p>
-              {{ data?.date | date: "dd-MM-yyyy" }}
+            <p class="layout-content-events-item-description">
+              {{ data?.description }}
             </p>
-            <p>{{ data?.description }}</p>
-          </ng-template>
-          <ng-template #actionClick>
-            <app-arrow-right-icon></app-arrow-right-icon>
+            <div
+              nz-row
+              nzType="flex"
+              nzAlign="middle"
+              nzJustify="space-between"
+            >
+              <div class="layout-content-events-item-date">
+                {{ data?.date | date: "EEEE, d MMMM, y" | uppercase }}
+              </div>
+              <app-arrow-right-icon></app-arrow-right-icon>
+            </div>
           </ng-template>
         </div>
       </div>
