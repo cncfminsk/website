@@ -85,7 +85,7 @@ export class EventListComponent implements OnInit {
   }
 
   private getFilterData(data: Observable<ICard[]>) {
-    return data.pipe(map(data => data.splice(0, 3)));
+    return data.pipe(map(data => data.slice(0, 3)));
   }
 
   public onFilterEventData(filter: string): void {

@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Inject } from "@angular/core";
+import { DOCUMENT } from "@angular/common";
 
 @Component({
   selector: "app-footer",
@@ -47,4 +48,15 @@ export class FooterComponent {
       link: "https://twitter.com/"
     }
   ];
+
+  constructor(@Inject(DOCUMENT) private document: Document) {}
+
+  public onScrollToTop() {
+    const header = document.getElementById("layout-header-content");
+    header.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  }
 }

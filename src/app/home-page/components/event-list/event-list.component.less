@@ -1,7 +1,6 @@
 .layout-content-events {
   padding: 64px 160px;
   flex-direction: column;
-  min-height: 1200px;
   background-color: #ffffff;
 }
 
@@ -16,38 +15,71 @@
 }
 
 .layout-content-events-filter-button {
-  padding: 20px 40px;
-  min-width: 250px;
-  min-height: 70px;
+  padding: 15px 30px;
+  min-width: 160px;
   margin-right: 32px;
 }
 
 .layout-content-events-list {
   width: 100%;
+  min-height: 600px;
 }
 
-::ng-deep .ant-card-body {
-  padding: 24px 0 12px 0;
+.ant-col:nth-child(1) .layout-content-events-item-container {
+  justify-content: flex-start;
 }
 
-::ng-deep .ant-card-actions {
-  border-top: none;
+.ant-col:nth-child(2) .layout-content-events-item-container {
+  justify-content: center;
 }
 
-::ng-deep .ant-card-actions > li {
-  text-align: start;
+.ant-col:nth-child(3) .layout-content-events-item-container {
+  justify-content: flex-end;
+}
+
+.layout-content-events-item {
+  width: 90%;
+  padding-bottom: 10px;
+}
+
+.layout-content-events-item-description {
+  font-size: 20px;
+}
+
+.layout-content-events-item-date {
+  color: rgba(32, 32, 32, 0.5);
+  font-size: 12px;
+}
+
+.layout-content-events-item-image {
+  max-height: 420px;
+  object-fit: cover;
+}
+
+::ng-deep .ant-card-meta {
+  height: 100%;
+  margin: 0;
+}
+
+::ng-deep .ant-card-meta-detail {
+  height: 100%;
 }
 
 ::ng-deep .ant-card-meta-title {
+  margin-top: 24px;
   font-size: 16px;
   color: #202020;
   font-weight: bold;
 }
 
 ::ng-deep .ant-card-meta-description {
-  font-size: 20px;
-  color: #202020;
+  height: 100%;
   font-family: "Open Sans", sans-serif;
+  color: #202020;
+}
+
+::ng-deep .ant-btn {
+  box-sizing: content-box;
 }
 
 ::ng-deep .ant-btn-primary:focus,

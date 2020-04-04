@@ -57,5 +57,42 @@
         }
       ]
     }
+  ],
+  "mainArticleData": {
+    "title": "Базовый вектор развития развеял последние сомнения",
+    "date": "2020-05-17",
+    "imageUrl": "/assets/images/main-article-picture.png",
+    "author": "Андрей Молотов",
+    "avatarUrl": "/assets/images/avatar.png"
+  },
+  "articlesData": [
+    {
+      "title": "Только прототип - не панацея",
+      "date": "2020-05-06",
+      "imageUrl": "/assets/images/article-picture.png",
+      "author": "Илья Петров",
+      "avatarUrl": "/assets/images/avatar.png"
+    },
+    {
+      "title": "Господа, солнечных дней всё меньше!",
+      "date": "2020-08-06",
+      "imageUrl": "/assets/images/article-picture.png",
+      "author": "Татьяна Васильева",
+      "avatarUrl": "/assets/images/avatar.png"
+    },
+    {
+      "title": "Господа, солнечных дней всё меньше!",
+      "date": "2020-12-06",
+      "imageUrl": "/assets/images/article-picture.png",
+      "author": "Илья Петров",
+      "avatarUrl": "/assets/images/avatar.png"
+    },
+    {
+      "title": "Благородные стремления не спасут: кровь стынет в жилах",
+      "date": "2020-04-06",
+      "imageUrl": "/assets/images/article-picture.png",
+      "author": "Игорь Сергеев",
+      "avatarUrl": "/assets/images/avatar.png"
+    }
   ]
 }

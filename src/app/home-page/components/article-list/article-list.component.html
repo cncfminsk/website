@@ -1,0 +1,120 @@
+<div class="layout-content-articles" nz-row>
+  <div nz-col nzSpan="9">
+    <div class="layout-content-articles-container" nz-row nzType="flex">
+      <div class="layout-content-articles-title">
+        <span>Тебе понравится!</span>
+      </div>
+      <div
+        class="layout-content-articles-list"
+        nz-row
+        nzType="flex"
+        nzJustify="space-between"
+        [ngStyle]="{
+          'flex-grow': (articlesData | async)?.length < 3 ? 0 : 1
+        }"
+      >
+        <ng-container *ngFor="let data of articlesData | async; index as i">
+          <nz-card
+            class="layout-content-articles-item"
+            nzHoverable
+            [nzBordered]="false"
+            [nzCover]="coverTemplate"
+            [ngStyle]="{
+              'margin-bottom':
+                (articlesData | async)?.length < 3 && i === 0 ? '50px' : 0
+            }"
+          >
+            <nz-card-meta [nzDescription]="descriptionTemplate"></nz-card-meta>
+          </nz-card>
+          <ng-template #coverTemplate>
+            <img
+              class="articles-item-image"
+              [src]="data?.imageUrl"
+              alt="article"
+            />
+          </ng-template>
+          <ng-template #descriptionTemplate>
+            <div
+              class="articles-item-description"
+              nz-row
+              nzType="flex"
+              nzJustify="space-between"
+            >
+              <div>
+                <p class="articles-item-date">
+                  {{ data?.date | date: "EEEE, d MMMM, y" | uppercase }}
+                </p>
+                <p class="articles-item-title">{{ data?.title }}</p>
+              </div>
+              <div
+                class="articles-item-author"
+                nz-row
+                nzType="flex"
+                nzJustify="space-between"
+                nzAlign="middle"
+              >
+                <div nz-row nzType="flex" nzAlign="middle">
+                  <nz-avatar
+                    class="articles-item-author-avatar"
+                    [nzText]="data?.author.slice(0, 2) | uppercase"
+                    [nzSrc]="data?.avatarUrl"
+                  ></nz-avatar>
+                  <div class="articles-item-author-name">
+                    {{ data?.author }}
+                  </div>
+                </div>
+                <app-arrow-right-icon></app-arrow-right-icon>
+              </div>
+            </div>
+          </ng-template>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <div nz-col nzSpan="15">
+    <div
+      class="layout-content-main-article-container"
+      nz-row
+      nzType="flex"
+      nzAlign="bottom"
+      [ngStyle]="{
+        background:
+          'linear-gradient(rgba(71, 82, 158, 0.65) 0%, rgba(71, 82, 158, 0.65) 100%
+        ),' +
+          'url(' +
+          (mainArticleData | async)?.imageUrl +
+          ')'
+      }"
+    >
+      <div
+        class="main-article-content"
+        nz-row
+        nzType="flex"
+        nzJustify="flex-start"
+      >
+        <div class="main-article-content-date">
+          {{
+            (mainArticleData | async)?.date
+              | date: "EEEE, d MMMM, y"
+              | uppercase
+          }}
+        </div>
+        <div class="main-article-content-title">
+          {{ (mainArticleData | async)?.title }}
+        </div>
+        <div nz-row nzType="flex" nzAlign="middle">
+          <nz-avatar
+            class="main-article-content-author-avatar"
+            [nzText]="(mainArticleData | async)?.author.slice(0, 2) | uppercase"
+            [nzSrc]="(mainArticleData | async)?.avatarUrl"
+            nzSize="large"
+          ></nz-avatar>
+          <div class="main-article-content-author-name">
+            {{ (mainArticleData | async)?.author }}
+          </div>
+          <app-arrow-right-icon type="light"></app-arrow-right-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
