@@ -50,7 +50,11 @@
             ></nz-card-meta>
           </nz-card>
           <ng-template #coverTemplate>
-            <img [src]="data?.imageUrl" alt="event" />
+            <img
+              class="layout-content-events-item-image"
+              [src]="data?.imageUrl"
+              alt="event"
+            />
           </ng-template>
           <ng-template #descriptionTemplate>
             <p class="layout-content-events-item-description">

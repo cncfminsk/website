@@ -22,6 +22,7 @@
 
 .layout-content-events-list {
   width: 100%;
+  min-height: 600px;
 }
 
 .ant-col:nth-child(1) .layout-content-events-item-container {
@@ -37,7 +38,7 @@
 }
 
 .layout-content-events-item {
-  width: 80%;
+  width: 90%;
   padding-bottom: 10px;
 }
 
@@ -48,6 +49,11 @@
 .layout-content-events-item-date {
   color: rgba(32, 32, 32, 0.5);
   font-size: 12px;
+}
+
+.layout-content-events-item-image {
+  max-height: 420px;
+  object-fit: cover;
 }
 
 ::ng-deep .ant-card-meta {

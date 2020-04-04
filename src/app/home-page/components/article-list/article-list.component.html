@@ -9,13 +9,20 @@
         nz-row
         nzType="flex"
         nzJustify="space-between"
+        [ngStyle]="{
+          'flex-grow': (articlesData | async)?.length < 3 ? 0 : 1
+        }"
       >
-        <ng-container *ngFor="let data of articlesData | async">
+        <ng-container *ngFor="let data of articlesData | async; index as i">
           <nz-card
             class="layout-content-articles-item"
             nzHoverable
             [nzBordered]="false"
             [nzCover]="coverTemplate"
+            [ngStyle]="{
+              'margin-bottom':
+                (articlesData | async)?.length < 3 && i === 0 ? '50px' : 0
+            }"
           >
             <nz-card-meta [nzDescription]="descriptionTemplate"></nz-card-meta>
           </nz-card>

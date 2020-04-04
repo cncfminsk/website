@@ -8,6 +8,7 @@ import { NzLayoutModule } from "ng-zorro-antd/layout";
 import { NzListModule } from "ng-zorro-antd/list";
 import { LayoutComponent } from "./components/layout/layout.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { CoreModule } from "../core/core.module";
 
 @NgModule({
   declarations: [HeaderComponent, LayoutComponent, FooterComponent],
@@ -17,7 +18,8 @@ import { FooterComponent } from "./components/footer/footer.component";
     NzTabsModule,
     NzGridModule,
     NzLayoutModule,
-    NzListModule
+    NzListModule,
+    CoreModule
   ],
   exports: [LayoutComponent]
 })

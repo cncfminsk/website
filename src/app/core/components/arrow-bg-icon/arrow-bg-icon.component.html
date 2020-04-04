@@ -1,0 +1,9 @@
+<ng-container
+  *ngIf="direction === 'top'; then topIcon; else rightIcon"
+></ng-container>
+<ng-template #topIcon>
+  <i nz-icon><img src="/assets/images/arrow-top-bg.svg"/></i>
+</ng-template>
+<ng-template #rightIcon
+  ><i nz-icon><img src="/assets/images/arrow-right-bg.svg"/></i
+></ng-template>
