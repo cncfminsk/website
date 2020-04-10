@@ -1,9 +1,8 @@
-<ng-container
-  *ngIf="type === 'light'; then lightIcon; else darkIcon"
-></ng-container>
+<i nz-icon *ngIf="type === 'light'; else darkIcon">
+  <img src="/assets/images/arrow-right-light.svg" />
+</i>
 <ng-template #darkIcon>
-  <i nz-icon><img src="/assets/images/arrow-right-dark.svg"/></i>
+  <i nz-icon>
+    <img src="/assets/images/arrow-right-dark.svg" />
+  </i>
 </ng-template>
-<ng-template #lightIcon
-  ><i nz-icon><img src="/assets/images/arrow-right-light.svg"/></i
-></ng-template>

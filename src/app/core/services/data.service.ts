@@ -1,36 +1,36 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
-import { ICard, IEvent, IArticle } from "src/app/home-page/models/Data";
+import { map, shareReplay } from "rxjs/operators";
+import { ICard, IEvent, IArticle, IData } from "src/app/core/models/Data";
+
+const CACHE_SIZE = 1;
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class DataService {
-  constructor(private http: HttpClient) {}
+  private data$: Observable<IData>;
 
-  public getRegistrationCardData(): Observable<ICard> {
-    return this.http
-      .get("/assets/data.json")
-      .pipe(map(data => data["registrationCardData"]));
+  constructor(private http: HttpClient) {
+    this.data$ = this.http
+      .get<IData>("/assets/data.json")
+      .pipe(shareReplay(CACHE_SIZE));
   }
 
-  public getEventsData(): Observable<IEvent[]> {
-    return this.http
-      .get("/assets/data.json")
-      .pipe(map(data => data["eventsData"]));
+  get registrationCardData(): Observable<ICard> {
+    return this.data$.pipe(map((data) => data["registrationCardData"]));
   }
 
-  public getMainArticleData(): Observable<IArticle> {
-    return this.http
-      .get("/assets/data.json")
-      .pipe(map(data => data["mainArticleData"]));
+  get eventsData(): Observable<IEvent[]> {
+    return this.data$.pipe(map((data) => data["eventsData"]));
   }
 
-  public getArticlesData(): Observable<IArticle[]> {
-    return this.http
-      .get("/assets/data.json")
-      .pipe(map(data => data["articlesData"]));
+  get mainArticleData(): Observable<IArticle> {
+    return this.data$.pipe(map((data) => data["mainArticleData"]));
+  }
+
+  get articlesData(): Observable<IArticle[]> {
+    return this.data$.pipe(map((data) => data["articlesData"]));
   }
 }

@@ -20,12 +20,8 @@
 
 .layout-footer-link {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: "Open Sans", sans-serif;
-}
-
-.layout-footer-social {
-  min-width: 300px;
 }
 
 ::ng-deep .ant-list {
@@ -36,4 +32,10 @@
   text-align: start;
   font-weight: bold;
   padding-top: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  ::ng-deep .ant-layout-footer {
+    padding: 2rem 6rem;
+  }
 }

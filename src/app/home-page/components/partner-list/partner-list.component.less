@@ -1,26 +1,44 @@
 .layout-content-partners {
-  padding: 55px 160px 132px 160px;
+  padding: 3rem 10rem 8rem 10rem;
   background-color: #ffffff;
 }
 
 .layout-content-partners-title {
   font-weight: bold;
-  font-size: 48px;
+  font-size: 3rem;
 }
 
-.layout-content-partners-content {
+.layout-content-partners-container {
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
-  margin-top: 75px;
+  font-size: 1.25rem;
+  margin-top: 4.5rem;
 }
 
-.layout-content-partners-list {
+.layout-content-partner-list {
   min-height: 185px;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: initial;
+}
+
+.partner-list-image-container {
+  padding: 0 0.5rem;
+  overflow: hidden;
 }
 
 .layout-content-help {
   font-weight: 500;
-  margin-right: 16px;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .layout-content-partners {
+    padding: 2rem 6rem 4rem 6rem;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .layout-content-partners-title {
+    font-size: 2rem;
+  }
 }

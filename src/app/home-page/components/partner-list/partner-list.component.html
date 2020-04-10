@@ -1,6 +1,6 @@
 <div class="layout-content-partners">
   <span class="layout-content-partners-title">Ты хорошей компании</span>
-  <div class="layout-content-partners-content">
+  <div class="layout-content-partners-container">
     <div nz-row nzGutter="80">
       <div nz-col nzSpan="12">
         Идейные соображения высшего порядка, а также укрепление и развитие
@@ -14,18 +14,20 @@
       </div>
     </div>
     <div
-      class="layout-content-partners-list"
+      class="layout-content-partner-list"
       nz-row
       nzType="flex"
       nzJustify="space-between"
       nzAlign="middle"
     >
-      <img src="/assets/images/amazon-logo.png" alt="amazon" />
-      <img src="/assets/images/amazon-logo.png" alt="amazon" />
-      <img src="/assets/images/amazon-logo.png" alt="amazon" />
-      <img src="/assets/images/amazon-logo.png" alt="amazon" />
-      <img src="/assets/images/amazon-logo.png" alt="amazon" />
-      <img src="/assets/images/amazon-logo.png" alt="amazon" />
+      <div
+        *ngFor="let partner of partnerList"
+        class="partner-list-image-container"
+      >
+        <a [href]="partner.link" target="_blank">
+          <img [src]="partner.logo" alt="amazon" />
+        </a>
+      </div>
     </div>
     <div nz-row nzType="flex" nzAlign="middle">
       <span class="layout-content-help">Хочешь помочь нам? Вперед!</span>
