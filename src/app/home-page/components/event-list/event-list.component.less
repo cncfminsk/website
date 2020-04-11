@@ -1,28 +1,27 @@
 .layout-content-events {
-  padding: 64px 160px;
+  padding: 4rem 10rem;
   flex-direction: column;
   background-color: #ffffff;
 }
 
 .layout-content-events-title {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 100px;
+  margin-bottom: 6rem;
 }
 
 .layout-content-events-filter {
-  margin-bottom: 70px;
+  margin-bottom: 4rem;
 }
 
 .layout-content-events-filter-button {
-  padding: 15px 30px;
+  padding: 1rem 2rem;
   min-width: 160px;
-  margin-right: 32px;
+  margin-right: 2rem;
 }
 
 .layout-content-events-list {
   width: 100%;
-  min-height: 600px;
 }
 
 .ant-col:nth-child(1) .layout-content-events-item-container {
@@ -39,16 +38,16 @@
 
 .layout-content-events-item {
   width: 90%;
-  padding-bottom: 10px;
+  padding-bottom: 1rem;
 }
 
 .layout-content-events-item-description {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .layout-content-events-item-date {
   color: rgba(32, 32, 32, 0.5);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .layout-content-events-item-image {
@@ -66,8 +65,8 @@
 }
 
 ::ng-deep .ant-card-meta-title {
-  margin-top: 24px;
-  font-size: 16px;
+  margin-top: 1.5rem;
+  font-size: 1rem;
   color: #202020;
   font-weight: bold;
 }
@@ -94,4 +93,37 @@
   background-color: #ffffff;
   border-color: #47529e;
   color: #47529e;
+}
+
+@media screen and (max-width: 1024px) {
+  .layout-content-events {
+    padding: 2rem 6rem;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .layout-content-events-list {
+    min-height: 500px;
+  }
+
+  .layout-content-events-title {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .layout-content-events-filter-button {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1360px) and (max-width: 1680px) {
+  .layout-content-events-list {
+    min-height: 500px;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .layout-content-events-list {
+    min-height: 600px;
+  }
 }

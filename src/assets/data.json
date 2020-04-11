@@ -10,15 +10,17 @@
       "id": "masterclass",
       "data": [
         {
-          "title": "Мастер-класс",
           "date": "2020-09-11",
+          "title": "Мастер-класс",
           "description": "Прототип нового сервиса - это как глас грядущего поколения",
+          "detailDescription": "Прототип нового сервиса - это как глас грядущего поколения",
           "imageUrl": "/assets/images/event-picture.png"
         },
         {
-          "title": "Мастер-класс",
           "date": "2020-12-11",
+          "title": "Мастер-класс",
           "description": "Британские ученые заявили, что прототип - не панацея",
+          "detailDescription": "Британские ученые заявили, что прототип - не панацея",
           "imageUrl": "/assets/images/event-picture.png"
         }
       ]
@@ -27,21 +29,24 @@
       "id": "meetup",
       "data": [
         {
-          "title": "Встреча",
           "date": "2020-04-25",
+          "title": "Встреча",
           "description": "Британские ученые заявили, что прототип - не панацея",
+          "detailDescription": "Британские ученые заявили, что прототип - не панацея",
           "imageUrl": "/assets/images/event-picture.png"
         },
         {
-          "title": "Встреча",
           "date": "2020-06-27",
+          "title": "Встреча",
           "description": "Прототип нового сервиса - это как глас грядущего поколения",
+          "detailDescription": "Прототип нового сервиса - это как глас грядущего поколения",
           "imageUrl": "/assets/images/event-picture.png"
         },
         {
-          "title": "Встреча",
           "date": "2020-05-29",
+          "title": "Встреча",
           "description": "Высококачественный прототип будущего проекта связывает нас",
+          "detailDescription": "Высококачественный прототип будущего проекта связывает нас",
           "imageUrl": "/assets/images/event-picture.png"
         }
       ]
@@ -50,46 +55,47 @@
       "id": "digest",
       "data": [
         {
-          "title": "Дайджест",
           "date": "2020-05-06",
+          "title": "Дайджест",
           "description": "Высококачественный прототип будущего проекта связывает нас",
+          "detailDescription": "Высококачественный прототип будущего проекта связывает нас",
           "imageUrl": "/assets/images/event-picture.png"
         }
       ]
     }
   ],
   "mainArticleData": {
-    "title": "Базовый вектор развития развеял последние сомнения",
     "date": "2020-05-17",
+    "title": "Базовый вектор развития развеял последние сомнения",
     "imageUrl": "/assets/images/main-article-picture.png",
     "author": "Андрей Молотов",
     "avatarUrl": "/assets/images/avatar.png"
   },
   "articlesData": [
     {
-      "title": "Только прототип - не панацея",
       "date": "2020-05-06",
+      "title": "Только прототип - не панацея",
       "imageUrl": "/assets/images/article-picture.png",
       "author": "Илья Петров",
       "avatarUrl": "/assets/images/avatar.png"
     },
     {
-      "title": "Господа, солнечных дней всё меньше!",
       "date": "2020-08-06",
+      "title": "Господа, солнечных дней всё меньше!",
       "imageUrl": "/assets/images/article-picture.png",
       "author": "Татьяна Васильева",
       "avatarUrl": "/assets/images/avatar.png"
     },
     {
-      "title": "Господа, солнечных дней всё меньше!",
       "date": "2020-12-06",
+      "title": "Господа, солнечных дней всё меньше!",
       "imageUrl": "/assets/images/article-picture.png",
       "author": "Илья Петров",
       "avatarUrl": "/assets/images/avatar.png"
     },
     {
-      "title": "Благородные стремления не спасут: кровь стынет в жилах",
       "date": "2020-04-06",
+      "title": "Благородные стремления не спасут: кровь стынет в жилах",
       "imageUrl": "/assets/images/article-picture.png",
       "author": "Игорь Сергеев",
       "avatarUrl": "/assets/images/avatar.png"

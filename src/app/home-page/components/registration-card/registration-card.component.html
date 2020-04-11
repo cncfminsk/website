@@ -8,16 +8,16 @@
     >
       <div class="registration-card-date">
         {{
-          (registrationCardData | async)?.date
+          (registrationCardData$ | async)?.date
             | date: "EEEE, d MMMM, y"
             | uppercase
         }}
       </div>
       <div class="registration-card-title">
-        {{ (registrationCardData | async)?.title }}
+        {{ (registrationCardData$ | async)?.title }}
       </div>
       <div class="registration-card-description">
-        {{ (registrationCardData | async)?.description }}
+        {{ (registrationCardData$ | async)?.description }}
       </div>
       <button
         class="registration-card-button"
@@ -40,7 +40,7 @@
     >
       <img
         class="registration-card-image"
-        [src]="(registrationCardData | async)?.imageUrl"
+        [src]="(registrationCardData$ | async)?.imageUrl"
         alt="event"
       />
     </div>

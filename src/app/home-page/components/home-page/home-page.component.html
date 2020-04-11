@@ -1,4 +1,10 @@
-<app-registration-card></app-registration-card>
-<app-event-list></app-event-list>
-<app-article-list></app-article-list>
-<app-partner-list></app-partner-list>
+<div class="spinner" *ngIf="isLoading$ | async; else homePage">
+  <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
+</div>
+
+<ng-template #homePage>
+  <app-registration-card></app-registration-card>
+  <app-event-list></app-event-list>
+  <app-article-list></app-article-list>
+  <app-partner-list></app-partner-list>
+</ng-template>

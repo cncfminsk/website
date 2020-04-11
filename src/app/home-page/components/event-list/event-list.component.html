@@ -4,7 +4,7 @@
   </div>
   <div class="layout-content-events-filter" nz-row nzType="flex">
     <button
-      *ngIf="(masterclassData | async)?.length > 0"
+      *ngIf="(masterclassData$ | async)?.length > 0"
       class="layout-content-events-filter-button"
       nz-button
       nzSize="small"
@@ -14,7 +14,7 @@
       {{ masterclassTitle | uppercase }}
     </button>
     <button
-      *ngIf="(meetupData | async)?.length > 0"
+      *ngIf="(meetupData$ | async)?.length > 0"
       class="layout-content-events-filter-button"
       nz-button
       nzSize="small"
@@ -24,7 +24,7 @@
       {{ meetupTitle | uppercase }}
     </button>
     <button
-      *ngIf="(digestData | async)?.length > 0"
+      *ngIf="(digestData$ | async)?.length > 0"
       class="layout-content-events-filter-button"
       nz-button
       nzSize="small"
@@ -35,12 +35,11 @@
     </button>
   </div>
   <div class="layout-content-events-list">
-    <ng-container *ngFor="let data of filteredData | async">
+    <ng-container *ngFor="let data of filteredData$ | async">
       <div nz-col nzSpan="8">
         <div class="layout-content-events-item-container" nz-row nzType="flex">
           <nz-card
             class="layout-content-events-item"
-            nzHoverable
             [nzBordered]="false"
             [nzCover]="coverTemplate"
           >
@@ -57,9 +56,13 @@
             />
           </ng-template>
           <ng-template #descriptionTemplate>
-            <p class="layout-content-events-item-description">
-              {{ data?.description }}
-            </p>
+            <p
+              class="layout-content-events-item-description"
+              nz-paragraph
+              nzEllipsis
+              [nzEllipsisRows]="2"
+              [nzContent]="data?.description"
+            ></p>
             <div
               nz-row
               nzType="flex"

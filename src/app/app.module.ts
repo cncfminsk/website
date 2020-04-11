@@ -23,12 +23,12 @@ registerLocaleData(localeRu, "ru-RU");
     HttpClientModule,
     BrowserAnimationsModule,
     LayoutModule,
-    HomePageModule
+    HomePageModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: ru_RU },
-    { provide: LOCALE_ID, useValue: "ru-RU" }
+    { provide: LOCALE_ID, useValue: "ru-RU" },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
