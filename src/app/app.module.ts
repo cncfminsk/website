@@ -11,6 +11,8 @@ import { registerLocaleData } from "@angular/common";
 import localeRu from "@angular/common/locales/ru";
 import { LayoutModule } from "./layout/layout.module";
 import { HomePageModule } from "./home-page/home-page.module";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 registerLocaleData(localeRu, "ru-RU");
 
@@ -24,6 +26,7 @@ registerLocaleData(localeRu, "ru-RU");
     BrowserAnimationsModule,
     LayoutModule,
     HomePageModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     { provide: NZ_I18N, useValue: ru_RU },
