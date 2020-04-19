@@ -1,9 +1,9 @@
 {
   "name": "cncfminsk",
   "short_name": "cncfminsk",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
-  "display": "standalone",
+  "theme_color": "#202020",
+  "background_color": "#f0f5f7",
+  "display": "minimal-ui",
   "scope": "./",
   "start_url": "./",
   "icons": [
