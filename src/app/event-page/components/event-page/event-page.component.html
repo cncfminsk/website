@@ -1,0 +1,22 @@
+<div class="event-page-content">
+  <div class="event-page-title">
+    <span>Если вдруг ты пропустил...</span>
+  </div>
+  <div class="event-page-list" nz-row>
+    <div nz-col nzSpan="11">
+      <div class="event-page-first-column" nz-row nzType="flex">
+        <ng-container *ngFor="let data of firstColumnData$ | async">
+          <app-event-card [eventData]="data"></app-event-card>
+        </ng-container>
+      </div>
+    </div>
+    <div nz-col nzSpan="2"></div>
+    <div nz-col nzSpan="11">
+      <div class="event-page-second-column" nz-row nzType="flex">
+        <ng-container *ngFor="let data of secondColumnData$ | async">
+          <app-event-card [eventData]="data"></app-event-card>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

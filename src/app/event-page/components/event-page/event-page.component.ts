@@ -5,13 +5,14 @@ import { map } from "rxjs/operators";
 import { IArticle } from "../../../core/models/Data";
 
 @Component({
-  selector: "app-article-list",
-  templateUrl: "./article-list.component.html",
-  styleUrls: ["./article-list.component.less"],
+  selector: "app-event-page",
+  templateUrl: "./event-page.component.html",
+  styleUrls: ["./event-page.component.less"],
 })
-export class ArticleListComponent implements OnInit {
-  public mainArticleData$: Observable<IArticle>;
+export class EventPageComponent implements OnInit {
   public articlesData$: Observable<IArticle[]>;
+  public firstColumnData$: Observable<IArticle[]>;
+  public secondColumnData$: Observable<IArticle[]>;
 
   private filterInitialData(
     articlesData$: Observable<IArticle[]>
@@ -19,11 +20,10 @@ export class ArticleListComponent implements OnInit {
     return articlesData$.pipe(
       map((articlesData) =>
         articlesData
-          .filter((x) => new Date(x.date).getTime() >= new Date().getTime())
+          .filter((x) => new Date(x.date).getTime() < new Date().getTime())
           .sort(
             (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
           )
-          .slice(0, 3)
       )
     );
   }
@@ -31,7 +31,16 @@ export class ArticleListComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.mainArticleData$ = this.dataService.mainArticleData;
     this.articlesData$ = this.filterInitialData(this.dataService.articlesData);
+    this.firstColumnData$ = this.articlesData$.pipe(
+      map((articlesData) =>
+        articlesData.slice(0, Math.ceil(articlesData.length / 2))
+      )
+    );
+    this.secondColumnData$ = this.articlesData$.pipe(
+      map((articlesData) =>
+        articlesData.slice(Math.ceil(articlesData.length / 2))
+      )
+    );
   }
 }

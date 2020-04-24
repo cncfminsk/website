@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { DataService } from "src/app/core/services/data.service";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
@@ -25,7 +25,6 @@ const DEFAULT_STATE = "default";
   selector: "app-event-list",
   templateUrl: "./event-list.component.html",
   styleUrls: ["./event-list.component.less"],
-  encapsulation: ViewEncapsulation.None,
 })
 export class EventListComponent implements OnInit {
   public meetupTitle: string = MEETUP_DATA.title;

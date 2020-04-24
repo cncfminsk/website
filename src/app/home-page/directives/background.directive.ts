@@ -9,7 +9,7 @@ export class BackgroundDirective implements OnInit {
 
   constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.renderer.setStyle(
       this.elementRef.nativeElement,
       "background-image",

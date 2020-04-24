@@ -14,7 +14,7 @@ export class RegistrationCardComponent implements OnInit {
 
   constructor(private dataService: DataService, private router: Router) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.registrationCardData$ = this.dataService.registrationCardData;
   }
 
