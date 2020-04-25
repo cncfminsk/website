@@ -1,11 +1,13 @@
+.layout-footer-content {
+  height: 100%;
+  padding: 3.5rem 10rem;
+  position: relative;
+}
+
 .back-to-top-btn {
   position: absolute;
   right: 64px;
   top: -36px;
-}
-
-.layout-footer-content {
-  height: 100%;
 }
 
 .layout-footer-logo-container {
@@ -24,18 +26,8 @@
   font-family: "Open Sans", sans-serif;
 }
 
-::ng-deep .ant-list {
-  color: #ffffff;
-}
-
-::ng-deep .ant-list-header {
-  text-align: start;
-  font-weight: bold;
-  padding-top: 0;
-}
-
 @media screen and (max-width: 1024px) {
-  ::ng-deep .ant-layout-footer {
+  .layout-footer-content {
     padding: 2rem 6rem;
   }
 }

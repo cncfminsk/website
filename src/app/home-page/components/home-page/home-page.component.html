@@ -1,5 +1,6 @@
 <div class="spinner" *ngIf="isLoading$ | async; else homePage">
-  <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
+  <ng-template #indicatorTemplate><i nz-icon nzType="loading"></i></ng-template>
+  <nz-spin nzSimple [nzIndicator]="indicatorTemplate"></nz-spin>
 </div>
 
 <ng-template #homePage>

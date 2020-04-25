@@ -1,0 +1,42 @@
+<nz-card [nzBordered]="false" [nzCover]="coverTemplate">
+  <nz-card-meta [nzDescription]="descriptionTemplate"></nz-card-meta>
+</nz-card>
+<ng-template #coverTemplate>
+  <div class="event-card-header">
+    <img class="event-card-image" [src]="eventData?.imageUrl" alt="article" />
+    <app-arrow-bg-icon class="event-card-btn"></app-arrow-bg-icon>
+  </div>
+</ng-template>
+<ng-template #descriptionTemplate>
+  <div #description class="event-card-description" nz-row nzType="flex">
+    <div>
+      <p class="event-card-description-date">
+        {{ eventData?.date | date: "EEEE, d MMMM, y" | uppercase }}
+      </p>
+      <p class="event-card-description-title">{{ eventData?.title }}</p>
+    </div>
+    <div
+      #authorList
+      class="event-card-description-author-list"
+      nz-row
+      nzType="flex"
+    >
+      <ng-container *ngFor="let speaker of eventData.speakers">
+        <div nz-row nzType="flex">
+          <nz-avatar
+            class="event-card-description-author-avatar"
+            [nzText]="speaker?.name.slice(0, 2) | uppercase"
+            [nzSrc]="speaker?.avatarUrl"
+          ></nz-avatar>
+          <div class="event-card-description-author-name">
+            {{ speaker?.name }}
+          </div>
+        </div>
+        <ng-container #ellipsisContainer></ng-container>
+      </ng-container>
+    </div>
+  </div>
+</ng-template>
+<ng-template #ellipsisTemplate>
+  <div class="ellipsis">...</div>
+</ng-template>

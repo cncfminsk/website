@@ -10,8 +10,8 @@ import { IArticle } from "../../../core/models/Data";
   styleUrls: ["./article-list.component.less"],
 })
 export class ArticleListComponent implements OnInit {
-  public mainArticleData$: Observable<IArticle>;
-  public articlesData$: Observable<IArticle[]>;
+  public mainDigestArticle$: Observable<IArticle>;
+  public digestArticles$: Observable<IArticle[]>;
 
   private filterInitialData(
     articlesData$: Observable<IArticle[]>
@@ -30,8 +30,10 @@ export class ArticleListComponent implements OnInit {
 
   constructor(private dataService: DataService) {}
 
-  ngOnInit() {
-    this.mainArticleData$ = this.dataService.mainArticleData;
-    this.articlesData$ = this.filterInitialData(this.dataService.articlesData);
+  ngOnInit(): void {
+    this.mainDigestArticle$ = this.dataService.mainDigestArticle;
+    this.digestArticles$ = this.filterInitialData(
+      this.dataService.digestArticles
+    );
   }
 }

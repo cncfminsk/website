@@ -3,25 +3,25 @@ import { Component } from "@angular/core";
 @Component({
   selector: "app-header",
   templateUrl: "./header.component.html",
-  styleUrls: ["./header.component.less"]
+  styleUrls: ["./header.component.less"],
 })
 export class HeaderComponent {
   public tabItems = [
     {
       label: "Главная",
-      route: ["/"]
+      route: ["/"],
     },
     {
       label: "События",
-      route: ["/"]
+      route: ["/events"],
     },
     {
       label: "Партнеры",
-      route: ["/"]
+      route: ["/"],
     },
     {
       label: "Докладчики",
-      route: ["/"]
-    }
+      route: ["/"],
+    },
   ];
 }

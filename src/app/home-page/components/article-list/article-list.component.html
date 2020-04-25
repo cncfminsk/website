@@ -16,14 +16,14 @@
         nz-row
         nzType="flex"
         nzJustify="space-between"
-        [appFlexGrow]="(articlesData$ | async)?.length || 0"
+        [appFlexGrow]="(digestArticles$ | async)?.length || 0"
       >
-        <ng-container *ngFor="let data of articlesData$ | async; index as i">
+        <ng-container *ngFor="let data of digestArticles$ | async; index as i">
           <nz-card
             class="layout-content-articles-item"
             [nzBordered]="false"
             [nzCover]="coverTemplate"
-            [appMarginBottom]="(articlesData$ | async)?.length || 0"
+            [appMarginBottom]="(digestArticles$ | async)?.length || 0"
             [index]="i"
           >
             <nz-card-meta [nzDescription]="descriptionTemplate"></nz-card-meta>
@@ -58,11 +58,11 @@
                 <div nz-row nzType="flex" nzAlign="middle">
                   <nz-avatar
                     class="articles-item-author-avatar"
-                    [nzText]="data?.author.slice(0, 2) | uppercase"
-                    [nzSrc]="data?.avatarUrl"
+                    [nzText]="data?.author.name.slice(0, 2) | uppercase"
+                    [nzSrc]="data?.author.avatarUrl"
                   ></nz-avatar>
                   <div class="articles-item-author-name">
-                    {{ data?.author }}
+                    {{ data?.author.name }}
                   </div>
                 </div>
                 <app-arrow-right-icon></app-arrow-right-icon>
@@ -86,7 +86,8 @@
       nz-row
       nzType="flex"
       nzAlign="bottom"
-      [appBackground]="(mainArticleData$ | async)?.imageUrl || ''"
+      [appBackground]="(mainDigestArticle$ | async)?.imageUrl || ''"
+      gradientColor="rgba(71, 82, 158, 0.65)"
     >
       <div
         class="main-article-content"
@@ -96,25 +97,25 @@
       >
         <div class="main-article-content-date">
           {{
-            (mainArticleData$ | async)?.date
+            (mainDigestArticle$ | async)?.date
               | date: "EEEE, d MMMM, y"
               | uppercase
           }}
         </div>
         <div class="main-article-content-title">
-          {{ (mainArticleData$ | async)?.title }}
+          {{ (mainDigestArticle$ | async)?.title }}
         </div>
         <div nz-row nzType="flex" nzAlign="middle">
           <nz-avatar
             class="main-article-content-author-avatar"
             [nzText]="
-              (mainArticleData$ | async)?.author.slice(0, 2) | uppercase
+              (mainDigestArticle$ | async)?.author.name.slice(0, 2) | uppercase
             "
-            [nzSrc]="(mainArticleData$ | async)?.avatarUrl"
+            [nzSrc]="(mainDigestArticle$ | async)?.author.avatarUrl"
             nzSize="large"
           ></nz-avatar>
           <div class="main-article-content-author-name">
-            {{ (mainArticleData$ | async)?.author }}
+            {{ (mainDigestArticle$ | async)?.author.name }}
           </div>
           <app-arrow-right-icon type="light"></app-arrow-right-icon>
         </div>

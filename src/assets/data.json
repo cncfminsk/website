@@ -1,104 +1,203 @@
 {
-  "registrationCardData": {
+  "eventForRegistration": {
     "date": "2020-05-17",
     "title": "Мелочь, а приятно: жизнь прекрасна",
     "description": "Товарищи! Новая модель организационной деятельности требуют определения и уточнения соответствующий условий активизации.",
     "imageUrl": "/assets/images/registration-picture.png"
   },
-  "eventsData": [
+  "masterlassEvents": [
     {
-      "id": "masterclass",
-      "data": [
+      "date": "2020-09-11",
+      "filter": "Мастер-класс",
+      "title": "Высококачественный прототип будущего проекта связывает нас",
+      "description": "Прототип нового сервиса - это как глас грядущего поколения",
+      "imageUrl": "/assets/images/event-picture.png"
+    },
+    {
+      "date": "2020-12-11",
+      "filter": "Мастер-класс",
+      "title": "Высококачественный прототип будущего проекта связывает нас",
+      "description": "Британские ученые заявили, что прототип - не панацея",
+      "imageUrl": "/assets/images/event-picture.png"
+    },
+    {
+      "date": "2019-12-11",
+      "title": "Господа, солнечных дней всё меньше!",
+      "description": "Британские ученые заявили, что прототип - не панацея",
+      "imageUrl": "/assets/images/event-picture.png",
+      "speakers": [
         {
-          "date": "2020-09-11",
-          "title": "Мастер-класс",
-          "description": "Прототип нового сервиса - это как глас грядущего поколения",
-          "detailDescription": "Прототип нового сервиса - это как глас грядущего поколения",
-          "imageUrl": "/assets/images/event-picture.png"
+          "name": "Андрей Воздвиженов",
+          "avatarUrl": "/assets/images/avatar.png"
         },
         {
-          "date": "2020-12-11",
-          "title": "Мастер-класс",
-          "description": "Британские ученые заявили, что прототип - не панацея",
-          "detailDescription": "Британские ученые заявили, что прототип - не панацея",
-          "imageUrl": "/assets/images/event-picture.png"
+          "name": "Наталья Преображенская",
+          "avatarUrl": "/assets/images/avatar.png"
+        },
+        {
+          "name": "Ольга Воробьева",
+          "avatarUrl": "/assets/images/avatar.png"
+        },
+        {
+          "name": "Василий Кожемякин",
+          "avatarUrl": "/assets/images/avatar.png"
+        },
+        {
+          "name": "Степан Алекссевич",
+          "avatarUrl": "/assets/images/avatar.png"
         }
       ]
     },
     {
-      "id": "meetup",
-      "data": [
+      "date": "2019-07-11",
+      "title": "Господа, солнечных дней всё меньше!",
+      "description": "Британские ученые заявили, что прототип - не панацея",
+      "imageUrl": "/assets/images/event-picture.png",
+      "speakers": [
         {
-          "date": "2020-04-25",
-          "title": "Встреча",
-          "description": "Британские ученые заявили, что прототип - не панацея",
-          "detailDescription": "Британские ученые заявили, что прототип - не панацея",
-          "imageUrl": "/assets/images/event-picture.png"
+          "name": "Ольга Воробьева",
+          "avatarUrl": "/assets/images/avatar.png"
         },
         {
-          "date": "2020-06-27",
-          "title": "Встреча",
-          "description": "Прототип нового сервиса - это как глас грядущего поколения",
-          "detailDescription": "Прототип нового сервиса - это как глас грядущего поколения",
-          "imageUrl": "/assets/images/event-picture.png"
+          "name": "Андрей Воздвиженов",
+          "avatarUrl": "/assets/images/avatar.png"
         },
         {
-          "date": "2020-05-29",
-          "title": "Встреча",
-          "description": "Высококачественный прототип будущего проекта связывает нас",
-          "detailDescription": "Высококачественный прототип будущего проекта связывает нас",
-          "imageUrl": "/assets/images/event-picture.png"
-        }
-      ]
-    },
-    {
-      "id": "digest",
-      "data": [
+          "name": "Наталья Преображенская",
+          "avatarUrl": "/assets/images/avatar.png"
+        },
         {
-          "date": "2020-05-06",
-          "title": "Дайджест",
-          "description": "Высококачественный прототип будущего проекта связывает нас",
-          "detailDescription": "Высококачественный прототип будущего проекта связывает нас",
-          "imageUrl": "/assets/images/event-picture.png"
+          "name": "Елизавета Никоноровна",
+          "avatarUrl": "/assets/images/avatar.png"
         }
       ]
     }
   ],
-  "mainArticleData": {
+  "meetupEvents": [
+    {
+      "date": "2020-05-25",
+      "filter": "Встреча",
+      "title": "Высококачественный прототип будущего проекта связывает нас",
+      "description": "Британские ученые заявили, что прототип - не панацея",
+      "imageUrl": "/assets/images/event-picture.png"
+    },
+    {
+      "date": "2020-06-27",
+      "filter": "Встреча",
+      "title": "Высококачественный прототип будущего проекта связывает нас",
+      "description": "Прототип нового сервиса - это как глас грядущего поколения",
+      "imageUrl": "/assets/images/event-picture.png"
+    },
+    {
+      "date": "2020-08-29",
+      "filter": "Встреча",
+      "title": "Высококачественный прототип будущего проекта связывает нас",
+      "description": "Высококачественный прототип будущего проекта связывает нас",
+      "imageUrl": "/assets/images/event-picture.png"
+    },
+    {
+      "date": "2019-04-25",
+      "title": "Базовый вектор развития развеял последние сомнения",
+      "description": "Британские ученые заявили, что прототип - не панацея",
+      "imageUrl": "/assets/images/event-picture.png",
+      "speakers": [
+        {
+          "name": "Ольга Воробьева",
+          "avatarUrl": "/assets/images/avatar.png"
+        },
+        {
+          "name": "Андрей Воздвиженов",
+          "avatarUrl": "/assets/images/avatar.png"
+        }
+      ]
+    },
+    {
+      "date": "2019-01-27",
+      "title": "Базовый вектор развития развеял последние сомнения",
+      "description": "Прототип нового сервиса - это как глас грядущего поколения",
+      "imageUrl": "/assets/images/event-picture.png",
+      "speakers": [
+        {
+          "name": "Ольга Воробьева",
+          "avatarUrl": "/assets/images/avatar.png"
+        },
+        {
+          "name": "Андрей Воздвиженов",
+          "avatarUrl": "/assets/images/avatar.png"
+        },
+        {
+          "name": "Наталья Преображенская",
+          "avatarUrl": "/assets/images/avatar.png"
+        },
+        {
+          "name": "Ольга Котова",
+          "avatarUrl": "/assets/images/avatar.png"
+        },
+        {
+          "name": "Игорь Сергеев",
+          "avatarUrl": "/assets/images/avatar.png"
+        },
+        {
+          "name": "Андрей Воздвиженов",
+          "avatarUrl": "/assets/images/avatar.png"
+        }
+      ]
+    }
+  ],
+  "mainDigestArticle": {
     "date": "2020-05-17",
     "title": "Базовый вектор развития развеял последние сомнения",
+    "description": "Прототип нового сервиса - это как глас грядущего поколения",
     "imageUrl": "/assets/images/main-article-picture.png",
-    "author": "Андрей Молотов",
-    "avatarUrl": "/assets/images/avatar.png"
+    "author": {
+      "name": "Андрей Молотов",
+      "avatarUrl": "/assets/images/avatar.png"
+    }
   },
-  "articlesData": [
+  "digestArticles": [
     {
       "date": "2020-05-06",
+      "filter": "Дайджест",
       "title": "Только прототип - не панацея",
+      "description": "Высококачественный прототип будущего проекта связывает нас",
       "imageUrl": "/assets/images/article-picture.png",
-      "author": "Илья Петров",
-      "avatarUrl": "/assets/images/avatar.png"
+      "author": {
+        "name": "Илья Петров",
+        "avatarUrl": "/assets/images/avatar.png"
+      }
+    },
+    {
+      "date": "2020-05-10",
+      "filter": "Дайджест",
+      "title": "Господа, солнечных дней всё меньше!",
+      "description": "Прототип нового сервиса - это как глас грядущего поколения",
+      "imageUrl": "/assets/images/article-picture.png",
+      "author": {
+        "name": "Татьяна Васильева",
+        "avatarUrl": "/assets/images/avatar.png"
+      }
     },
     {
       "date": "2020-08-06",
+      "filter": "Дайджест",
       "title": "Господа, солнечных дней всё меньше!",
+      "description": "Высококачественный прототип будущего проекта связывает нас",
       "imageUrl": "/assets/images/article-picture.png",
-      "author": "Татьяна Васильева",
-      "avatarUrl": "/assets/images/avatar.png"
+      "author": {
+        "name": "Марфа Ивановна",
+        "avatarUrl": "/assets/images/avatar.png"
+      }
     },
     {
-      "date": "2020-12-06",
-      "title": "Господа, солнечных дней всё меньше!",
-      "imageUrl": "/assets/images/article-picture.png",
-      "author": "Илья Петров",
-      "avatarUrl": "/assets/images/avatar.png"
-    },
-    {
-      "date": "2020-04-06",
+      "date": "2020-07-06",
+      "filter": "Дайджест",
       "title": "Благородные стремления не спасут: кровь стынет в жилах",
+      "description": "Британские ученые заявили, что прототип - не панацея",
       "imageUrl": "/assets/images/article-picture.png",
-      "author": "Игорь Сергеев",
-      "avatarUrl": "/assets/images/avatar.png"
+      "author": {
+        "name": "Игорь Сергеев",
+        "avatarUrl": "/assets/images/avatar.png"
+      }
     }
   ]
 }

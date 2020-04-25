@@ -15,7 +15,7 @@ export class HomePageComponent implements OnInit {
     private changeDetectionRef: ChangeDetectorRef
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.isLoading$ = this.loaderService.isLoading$;
   }
 

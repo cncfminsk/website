@@ -2,7 +2,12 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { map, shareReplay } from "rxjs/operators";
-import { ICard, IEvent, IArticle, IData } from "src/app/core/models/Data";
+import {
+  IEvent,
+  IArticle,
+  IData,
+  IFilterGroupData,
+} from "src/app/core/models/Data";
 
 const CACHE_SIZE = 1;
 
@@ -18,19 +23,40 @@ export class DataService {
       .pipe(shareReplay(CACHE_SIZE));
   }
 
-  get registrationCardData(): Observable<ICard> {
-    return this.data$.pipe(map((data) => data["registrationCardData"]));
+  get eventForRegistration(): Observable<IEvent> {
+    return this.data$.pipe(map((data) => data["eventForRegistration"]));
+  }
+
+  get dataForFilter(): Observable<IFilterGroupData[]> {
+    return this.data$.pipe(
+      map((data) => [
+        {
+          id: "masterlassEvents",
+          data: data["masterlassEvents"],
+        },
+        {
+          id: "meetupEvents",
+          data: data["meetupEvents"],
+        },
+        {
+          id: "digestArticles",
+          data: data["digestArticles"],
+        },
+      ])
+    );
   }
 
   get eventsData(): Observable<IEvent[]> {
-    return this.data$.pipe(map((data) => data["eventsData"]));
+    return this.data$.pipe(
+      map((data) => [...data["masterlassEvents"], ...data["meetupEvents"]])
+    );
   }
 
-  get mainArticleData(): Observable<IArticle> {
-    return this.data$.pipe(map((data) => data["mainArticleData"]));
+  get mainDigestArticle(): Observable<IArticle> {
+    return this.data$.pipe(map((data) => data["mainDigestArticle"]));
   }
 
-  get articlesData(): Observable<IArticle[]> {
-    return this.data$.pipe(map((data) => data["articlesData"]));
+  get digestArticles(): Observable<IArticle[]> {
+    return this.data$.pipe(map((data) => data["digestArticles"]));
   }
 }

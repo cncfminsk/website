@@ -5,14 +5,20 @@ import { Directive, ElementRef, Renderer2, Input, OnInit } from "@angular/core";
 })
 export class BackgroundDirective implements OnInit {
   @Input("appBackground") imageUrl: string;
+  @Input() gradientColor: string;
 
   constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.renderer.setStyle(
       this.elementRef.nativeElement,
-      "background",
-      `linear-gradient(rgba(71, 82, 158, 0.65) 0%, rgba(71, 82, 158, 0.65) 100%), url(${this.imageUrl})`
+      "background-image",
+      `${
+        this.gradientColor
+          ? `linear-gradient(${this.gradientColor} 0%, ${this.gradientColor} 100%),`
+          : ""
+      }
+      url(${this.imageUrl})`
     );
   }
 }
