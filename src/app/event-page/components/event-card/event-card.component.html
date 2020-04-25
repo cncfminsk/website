@@ -21,116 +21,19 @@
       nz-row
       nzType="flex"
     >
-      <div nz-row nzType="flex">
-        <nz-avatar
-          class="event-card-description-author-avatar"
-          [nzText]="eventData?.author.slice(0, 2) | uppercase"
-          [nzSrc]="eventData?.avatarUrl"
-        ></nz-avatar>
-        <div class="event-card-description-author-name">
-          {{ eventData?.author }}
+      <ng-container *ngFor="let speaker of eventData.speakers">
+        <div nz-row nzType="flex">
+          <nz-avatar
+            class="event-card-description-author-avatar"
+            [nzText]="speaker?.name.slice(0, 2) | uppercase"
+            [nzSrc]="speaker?.avatarUrl"
+          ></nz-avatar>
+          <div class="event-card-description-author-name">
+            {{ speaker?.name }}
+          </div>
         </div>
-      </div>
-      <ng-container #ellipsisContainer></ng-container>
-      <div nz-row nzType="flex">
-        <nz-avatar
-          class="event-card-description-author-avatar"
-          [nzText]="eventData?.author.slice(0, 2) | uppercase"
-          [nzSrc]="eventData?.avatarUrl"
-        ></nz-avatar>
-        <div class="event-card-description-author-name">
-          {{ eventData?.author }}
-        </div>
-      </div>
-      <ng-container #ellipsisContainer></ng-container>
-      <div nz-row nzType="flex">
-        <nz-avatar
-          class="event-card-description-author-avatar"
-          [nzText]="eventData?.author.slice(0, 2) | uppercase"
-          [nzSrc]="eventData?.avatarUrl"
-        ></nz-avatar>
-        <div class="event-card-description-author-name">
-          {{ eventData?.author }}
-        </div>
-      </div>
-      <ng-container #ellipsisContainer></ng-container>
-      <div nz-row nzType="flex">
-        <nz-avatar
-          class="event-card-description-author-avatar"
-          [nzText]="eventData?.author.slice(0, 2) | uppercase"
-          [nzSrc]="eventData?.avatarUrl"
-        ></nz-avatar>
-        <div class="event-card-description-author-name">
-          {{ eventData?.author }}
-        </div>
-      </div>
-      <ng-container #ellipsisContainer></ng-container>
-      <div nz-row nzType="flex">
-        <nz-avatar
-          class="event-card-description-author-avatar"
-          [nzText]="eventData?.author.slice(0, 2) | uppercase"
-          [nzSrc]="eventData?.avatarUrl"
-        ></nz-avatar>
-        <div class="event-card-description-author-name">
-          {{ eventData?.author }}
-        </div>
-      </div>
-      <ng-container #ellipsisContainer></ng-container>
-      <div nz-row nzType="flex">
-        <nz-avatar
-          class="event-card-description-author-avatar"
-          [nzText]="eventData?.author.slice(0, 2) | uppercase"
-          [nzSrc]="eventData?.avatarUrl"
-        ></nz-avatar>
-        <div class="event-card-description-author-name">
-          {{ eventData?.author }}
-        </div>
-      </div>
-      <ng-container #ellipsisContainer></ng-container>
-      <div nz-row nzType="flex">
-        <nz-avatar
-          class="event-card-description-author-avatar"
-          [nzText]="eventData?.author.slice(0, 2) | uppercase"
-          [nzSrc]="eventData?.avatarUrl"
-        ></nz-avatar>
-        <div class="event-card-description-author-name">
-          {{ eventData?.author }}
-        </div>
-      </div>
-      <ng-container #ellipsisContainer></ng-container>
-      <div nz-row nzType="flex">
-        <nz-avatar
-          class="event-card-description-author-avatar"
-          [nzText]="eventData?.author.slice(0, 2) | uppercase"
-          [nzSrc]="eventData?.avatarUrl"
-        ></nz-avatar>
-        <div class="event-card-description-author-name">
-          {{ eventData?.author }}
-        </div>
-      </div>
-      <ng-container #ellipsisContainer></ng-container>
-      <div nz-row nzType="flex">
-        <nz-avatar
-          class="event-card-description-author-avatar"
-          [nzText]="eventData?.author.slice(0, 2) | uppercase"
-          [nzSrc]="eventData?.avatarUrl"
-        ></nz-avatar>
-        <div class="event-card-description-author-name">
-          {{ eventData?.author }}
-        </div>
-      </div>
-      <ng-container #ellipsisContainer></ng-container>
-      <div nz-row nzType="flex">
-        <nz-avatar
-          class="event-card-description-author-avatar"
-          [nzText]="eventData?.author.slice(0, 2) | uppercase"
-          [nzSrc]="eventData?.avatarUrl"
-        ></nz-avatar>
-        <div class="event-card-description-author-name">
-          {{ eventData?.author }}
-        </div>
-      </div>
-      <ng-container #ellipsisContainer></ng-container>
+        <ng-container #ellipsisContainer></ng-container>
+      </ng-container>
     </div>
   </div>
 </ng-template>

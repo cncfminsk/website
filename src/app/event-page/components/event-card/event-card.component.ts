@@ -10,7 +10,7 @@ import {
   AfterViewInit,
   HostListener,
 } from "@angular/core";
-import { IArticle } from "../../../core/models/Data";
+import { IEvent } from "../../../core/models/Data";
 
 const ELLIPSIS_WIDTH = 20;
 const AUTHOR_LIST_VIEW_ROWS = 2;
@@ -21,7 +21,7 @@ const AUTHOR_LIST_VIEW_ROWS = 2;
   styleUrls: ["./event-card.component.less"],
 })
 export class EventCardComponent implements AfterViewInit {
-  @Input() eventData: IArticle;
+  @Input() eventData: IEvent;
 
   @HostListener("window:resize", ["$event.target"])
   onResize() {
@@ -89,21 +89,24 @@ export class EventCardComponent implements AfterViewInit {
         this.currentIndex
       );
 
-      if (index !== this.currentIndex) {
-        const ellipsisContainer = this.ellipsisContainer.toArray();
+      if (index === this.currentIndex) return;
 
-        if (ellipsisContainer[this.currentIndex].get(0)) {
-          ellipsisContainer[this.currentIndex].remove(0);
-        }
+      const ellipsisContainer = this.ellipsisContainer.toArray();
 
-        if (index !== -1) {
-          ellipsisContainer[index].insert(
-            this.ellipsisTemplate.createEmbeddedView(this.ellipsisTemplate)
-          );
-
-          this.currentIndex = index;
-        }
+      if (ellipsisContainer[this.currentIndex].get(0)) {
+        ellipsisContainer[this.currentIndex].remove(0);
       }
+
+      if (index === -1) {
+        this.currentIndex = 0;
+        return;
+      }
+
+      ellipsisContainer[index].insert(
+        this.ellipsisTemplate.createEmbeddedView(this.ellipsisTemplate)
+      );
+
+      this.currentIndex = index;
     }, 100);
   }
 

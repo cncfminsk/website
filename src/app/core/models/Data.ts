@@ -1,27 +1,37 @@
-export interface ICard {
+export interface IPerson {
+  name: string;
+  avatarUrl: string;
+}
+
+export interface IEvent {
   date: Date | string;
+  filter?: string;
   title: string;
   description: string;
   detailDescription?: string;
   imageUrl: string;
-}
-
-export interface IEvent {
-  id: string;
-  data: ICard[];
+  speakers?: IPerson[];
 }
 
 export interface IArticle {
   date: Date | string;
+  filter?: string;
   title: string;
+  description: string;
+  detailDescription?: string;
   imageUrl: string;
-  author: string;
-  avatarUrl: string;
+  author?: IPerson;
 }
 
 export interface IData {
-  registrationCardData: ICard;
-  eventsData: IEvent[];
-  mainArticleData: IArticle;
-  articlesData: IArticle[];
+  eventForRegistration: IEvent;
+  masterlassEvents: IEvent[];
+  meetupEvents: IEvent[];
+  mainDigestArticle: IArticle;
+  digestArticles: IArticle[];
+}
+
+export interface IFilterGroupData {
+  id: string;
+  data: (IArticle | IEvent)[];
 }

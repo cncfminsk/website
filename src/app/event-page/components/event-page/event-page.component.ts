@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { DataService } from "src/app/core/services/data.service";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
-import { IArticle } from "../../../core/models/Data";
+import { IEvent } from "../../../core/models/Data";
 
 @Component({
   selector: "app-event-page",
@@ -10,16 +10,17 @@ import { IArticle } from "../../../core/models/Data";
   styleUrls: ["./event-page.component.less"],
 })
 export class EventPageComponent implements OnInit {
-  public articlesData$: Observable<IArticle[]>;
-  public firstColumnData$: Observable<IArticle[]>;
-  public secondColumnData$: Observable<IArticle[]>;
+  private eventsData$: Observable<IEvent[]>;
+
+  public firstColumnData$: Observable<IEvent[]>;
+  public secondColumnData$: Observable<IEvent[]>;
 
   private filterInitialData(
-    articlesData$: Observable<IArticle[]>
-  ): Observable<IArticle[]> {
-    return articlesData$.pipe(
-      map((articlesData) =>
-        articlesData
+    eventsData$: Observable<IEvent[]>
+  ): Observable<IEvent[]> {
+    return eventsData$.pipe(
+      map((eventsData) =>
+        eventsData
           .filter((x) => new Date(x.date).getTime() < new Date().getTime())
           .sort(
             (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
@@ -31,16 +32,13 @@ export class EventPageComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.articlesData$ = this.filterInitialData(this.dataService.articlesData);
-    this.firstColumnData$ = this.articlesData$.pipe(
-      map((articlesData) =>
-        articlesData.slice(0, Math.ceil(articlesData.length / 2))
-      )
+    this.eventsData$ = this.filterInitialData(this.dataService.eventsData);
+
+    this.firstColumnData$ = this.eventsData$.pipe(
+      map((eventsData) => eventsData.slice(0, Math.ceil(eventsData.length / 2)))
     );
-    this.secondColumnData$ = this.articlesData$.pipe(
-      map((articlesData) =>
-        articlesData.slice(Math.ceil(articlesData.length / 2))
-      )
+    this.secondColumnData$ = this.eventsData$.pipe(
+      map((eventsData) => eventsData.slice(Math.ceil(eventsData.length / 2)))
     );
   }
 }

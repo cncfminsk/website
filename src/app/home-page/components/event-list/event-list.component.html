@@ -9,7 +9,7 @@
       nz-button
       nzSize="small"
       [nzType]="filterActive === masterclassTitle ? 'primary' : 'default'"
-      (click)="onFilterEventData(masterclassTitle)"
+      (click)="onFilterData(masterclassTitle)"
     >
       {{ masterclassTitle | uppercase }}
     </button>
@@ -19,7 +19,7 @@
       nz-button
       nzSize="small"
       [nzType]="filterActive === meetupTitle ? 'primary' : 'default'"
-      (click)="onFilterEventData(meetupTitle)"
+      (click)="onFilterData(meetupTitle)"
     >
       {{ meetupTitle | uppercase }}
     </button>
@@ -29,7 +29,7 @@
       nz-button
       nzSize="small"
       [nzType]="filterActive === digestTitle ? 'primary' : 'default'"
-      (click)="onFilterEventData(digestTitle)"
+      (click)="onFilterData(digestTitle)"
     >
       {{ digestTitle | uppercase }}
     </button>
@@ -44,7 +44,7 @@
             [nzCover]="coverTemplate"
           >
             <nz-card-meta
-              [nzTitle]="data?.title | uppercase"
+              [nzTitle]="data?.filter | uppercase"
               [nzDescription]="descriptionTemplate"
             ></nz-card-meta>
           </nz-card>

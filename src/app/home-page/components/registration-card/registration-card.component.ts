@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Observable } from "rxjs";
 import { DataService } from "src/app/core/services/data.service";
-import { ICard } from "../../../core/models/Data";
+import { IEvent } from "../../../core/models/Data";
 
 @Component({
   selector: "app-registration-card",
@@ -10,12 +10,12 @@ import { ICard } from "../../../core/models/Data";
   styleUrls: ["./registration-card.component.less"],
 })
 export class RegistrationCardComponent implements OnInit {
-  public registrationCardData$: Observable<ICard>;
+  public eventForRegistration$: Observable<IEvent>;
 
   constructor(private dataService: DataService, private router: Router) {}
 
   ngOnInit(): void {
-    this.registrationCardData$ = this.dataService.registrationCardData;
+    this.eventForRegistration$ = this.dataService.eventForRegistration;
   }
 
   public onRegistration() {
