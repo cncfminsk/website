@@ -1,24 +1,62 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
-import { ICard, IEvent } from "src/app/home-page/models/Data";
+import { map, shareReplay } from "rxjs/operators";
+import {
+  IEvent,
+  IArticle,
+  IData,
+  IFilterGroupData,
+} from "src/app/core/models/Data";
+
+const CACHE_SIZE = 1;
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class DataService {
-  constructor(private http: HttpClient) {}
+  private data$: Observable<IData>;
 
-  public getRegistrationCardData(): Observable<ICard> {
-    return this.http
-      .get("/assets/data.json")
-      .pipe(map(data => data["registrationCardData"]));
+  constructor(private http: HttpClient) {
+    this.data$ = this.http
+      .get<IData>("/assets/data.json")
+      .pipe(shareReplay(CACHE_SIZE));
   }
 
-  public getEventsData(): Observable<IEvent[]> {
-    return this.http
-      .get("/assets/data.json")
-      .pipe(map(data => data["eventsData"]));
+  get eventForRegistration(): Observable<IEvent> {
+    return this.data$.pipe(map((data) => data["eventForRegistration"]));
+  }
+
+  get dataForFilter(): Observable<IFilterGroupData[]> {
+    return this.data$.pipe(
+      map((data) => [
+        {
+          id: "masterlassEvents",
+          data: data["masterlassEvents"],
+        },
+        {
+          id: "meetupEvents",
+          data: data["meetupEvents"],
+        },
+        {
+          id: "digestArticles",
+          data: data["digestArticles"],
+        },
+      ])
+    );
+  }
+
+  get eventsData(): Observable<IEvent[]> {
+    return this.data$.pipe(
+      map((data) => [...data["masterlassEvents"], ...data["meetupEvents"]])
+    );
+  }
+
+  get mainDigestArticle(): Observable<IArticle> {
+    return this.data$.pipe(map((data) => data["mainDigestArticle"]));
+  }
+
+  get digestArticles(): Observable<IArticle[]> {
+    return this.data$.pipe(map((data) => data["digestArticles"]));
   }
 }

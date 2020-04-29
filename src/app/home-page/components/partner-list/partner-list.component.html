@@ -1,0 +1,37 @@
+<div class="layout-content-partners">
+  <span class="layout-content-partners-title">Ты хорошей компании</span>
+  <div class="layout-content-partners-container">
+    <div nz-row nzGutter="80">
+      <div nz-col nzSpan="12">
+        Идейные соображения высшего порядка, а также укрепление и развитие
+        внутренней структуры позволяет выполнить важные задания по разработке
+        экспериментов, поражающих по своей масштабности и грандиозности.
+      </div>
+      <div nz-col nzSpan="12">
+        Каждый из нас понимает очевидную вещь: начало повседневной работы по
+        формированию позиции напрямую зависит от поэтапного и последовательного
+        развития общества.
+      </div>
+    </div>
+    <div
+      class="layout-content-partner-list"
+      nz-row
+      nzType="flex"
+      nzJustify="space-between"
+      nzAlign="middle"
+    >
+      <div
+        *ngFor="let partner of partnerList"
+        class="partner-list-image-container"
+      >
+        <a [href]="partner.link" target="_blank">
+          <img [src]="partner.logo" alt="amazon" />
+        </a>
+      </div>
+    </div>
+    <div nz-row nzType="flex" nzAlign="middle">
+      <span class="layout-content-help">Хочешь помочь нам? Вперед!</span>
+      <app-arrow-right-icon></app-arrow-right-icon>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,13 @@
 .layout-footer-content {
   height: 100%;
+  padding: 3.5rem 10rem;
+  position: relative;
+}
+
+.back-to-top-btn {
+  position: absolute;
+  right: 64px;
+  top: -36px;
 }
 
 .layout-footer-logo-container {
@@ -12,21 +20,14 @@
   max-height: 100%;
 }
 
-::ng-deep .ant-list {
-  color: #ffffff;
-}
-
 .layout-footer-link {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: "Open Sans", sans-serif;
 }
 
-::ng-deep .ant-list-header {
-  text-align: start;
-  font-weight: bold;
-}
-
-.layout-footer-social {
-  min-width: 300px;
+@media screen and (max-width: 1024px) {
+  .layout-footer-content {
+    padding: 2rem 6rem;
+  }
 }

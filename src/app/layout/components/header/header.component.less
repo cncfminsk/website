@@ -1,5 +1,6 @@
 .layout-header-content {
   height: 100%;
+  padding: 0 10rem;
 }
 
 .layout-header-logo-container {
@@ -12,14 +13,18 @@
   max-height: 100%;
 }
 
-::ng-deep .ant-tabs-nav {
-  font-weight: 500;
+@media screen and (max-width: 1024px) {
+  .ant-tabs-nav .ant-tabs-tab {
+    margin: 0;
+  }
+
+  .layout-header-content {
+    padding: 0 6rem;
+  }
 }
 
-::ng-deep .ant-tabs-bar {
-  border-bottom: none;
-}
-
-::ng-deep .ant-tabs-ink-bar {
-  height: 4px;
+@media screen and (min-width: 1024px) and (max-width: 1360px) {
+  .ant-tabs-nav .ant-tabs-tab {
+    margin: 0 2rem 0 0;
+  }
 }

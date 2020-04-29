@@ -1,8 +1,18 @@
-import { Component } from "@angular/core";
+import { Component, ViewChild, ElementRef } from "@angular/core";
 
 @Component({
   selector: "app-layout",
   templateUrl: "./layout.component.html",
-  styleUrls: ["./layout.component.less"]
+  styleUrls: ["./layout.component.less"],
 })
-export class LayoutComponent {}
+export class LayoutComponent {
+  @ViewChild("header", { read: ElementRef }) header: ElementRef;
+
+  public scrollToTop() {
+    this.header.nativeElement.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  }
+}

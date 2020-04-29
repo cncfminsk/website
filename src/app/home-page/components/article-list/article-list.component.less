@@ -1,0 +1,118 @@
+.layout-content-articles {
+  padding: 0.5rem 0 1.25rem 10rem;
+  background-color: #ffffff;
+}
+
+.layout-content-articles-container {
+  flex-direction: column;
+  min-height: 1000px;
+  padding: 4rem 4rem 7rem 0;
+}
+
+.layout-content-articles-title {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 6rem;
+}
+
+.layout-content-articles-list {
+  flex-direction: column;
+}
+
+.layout-content-articles-item {
+  width: 100%;
+  display: flex;
+}
+
+.layout-content-articles-item:nth-child(2n) {
+  flex-flow: row-reverse;
+}
+
+.articles-item-image {
+  width: auto;
+  max-height: 185px;
+  object-fit: cover;
+}
+
+.articles-item-description {
+  height: 100%;
+  padding: 0.5rem 0;
+  flex-direction: column;
+}
+
+.layout-content-articles-item:nth-child(2n + 1) .articles-item-description {
+  padding-left: 2rem;
+}
+
+.layout-content-articles-item:nth-child(2n) .articles-item-description {
+  padding-right: 2rem;
+}
+
+.articles-item-date {
+  font-size: 0.75rem;
+}
+
+.articles-item-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.articles-item-author {
+  width: 100%;
+}
+
+.articles-item-author-avatar {
+  margin-right: 0.75rem;
+}
+
+.layout-content-main-article-container {
+  background-size: cover;
+  width: 100%;
+  min-height: 1000px;
+  padding: 5rem 6.5rem;
+}
+
+.main-article-content {
+  color: #ffffff;
+  flex-direction: column;
+}
+
+.main-article-content-date {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 2.5rem;
+}
+
+.main-article-content-title {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.main-article-content-author-avatar {
+  background-color: #ffffff;
+  color: #202020;
+  margin-right: 0.5rem;
+}
+
+.main-article-content-author-name {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .layout-content-articles {
+    padding: 0.5rem 0 1.25rem 6rem;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .layout-content-articles-title,
+  .main-article-content-title {
+    font-size: 2rem;
+  }
+
+  .layout-content-main-article-container {
+    padding: 5rem 2rem;
+  }
+}

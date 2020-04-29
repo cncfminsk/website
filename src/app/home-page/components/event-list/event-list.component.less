@@ -1,65 +1,89 @@
 .layout-content-events {
-  padding: 64px 160px;
+  padding: 4rem 10rem;
   flex-direction: column;
-  min-height: 1200px;
   background-color: #ffffff;
 }
 
 .layout-content-events-title {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 100px;
+  margin-bottom: 6rem;
 }
 
 .layout-content-events-filter {
-  margin-bottom: 70px;
+  margin-bottom: 4rem;
 }
 
-.layout-content-events-filter-button {
-  padding: 20px 40px;
-  min-width: 250px;
-  min-height: 70px;
-  margin-right: 32px;
+.layout-content-events-filter-btn {
+  padding: 1rem 2rem;
+  min-width: 160px;
+  margin-right: 2rem;
 }
 
 .layout-content-events-list {
   width: 100%;
 }
 
-::ng-deep .ant-card-body {
-  padding: 24px 0 12px 0;
+.ant-col:nth-child(1) .layout-content-events-item-container {
+  justify-content: flex-start;
 }
 
-::ng-deep .ant-card-actions {
-  border-top: none;
+.ant-col:nth-child(2) .layout-content-events-item-container {
+  justify-content: center;
 }
 
-::ng-deep .ant-card-actions > li {
-  text-align: start;
+.ant-col:nth-child(3) .layout-content-events-item-container {
+  justify-content: flex-end;
 }
 
-::ng-deep .ant-card-meta-title {
-  font-size: 16px;
-  color: #202020;
-  font-weight: bold;
+.layout-content-events-item {
+  width: 90%;
+  padding-bottom: 1rem;
 }
 
-::ng-deep .ant-card-meta-description {
-  font-size: 20px;
-  color: #202020;
-  font-family: "Open Sans", sans-serif;
+.layout-content-events-item-description {
+  font-size: 1.25rem;
 }
 
-::ng-deep .ant-btn-primary:focus,
-::ng-deep .ant-btn-primary:active {
-  background-color: #47529e;
-  border-color: #47529e;
-  color: #ffffff;
+.layout-content-events-item-date {
+  color: rgba(32, 32, 32, 0.5);
+  font-size: 0.75rem;
 }
 
-::ng-deep .ant-btn-default:focus,
-::ng-deep .ant-btn-default:active {
-  background-color: #ffffff;
-  border-color: #47529e;
-  color: #47529e;
+.layout-content-events-item-image {
+  max-height: 420px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .layout-content-events {
+    padding: 2rem 6rem;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .layout-content-events-list {
+    min-height: 500px;
+  }
+
+  .layout-content-events-title {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .layout-content-events-filter-btn {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1360px) and (max-width: 1680px) {
+  .layout-content-events-list {
+    min-height: 500px;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .layout-content-events-list {
+    min-height: 600px;
+  }
 }

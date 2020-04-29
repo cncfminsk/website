@@ -1,12 +1,11 @@
-
 <nz-layout>
-  <nz-header>
+  <nz-header #header>
     <app-header></app-header>
   </nz-header>
   <nz-content>
     <ng-content></ng-content>
   </nz-content>
   <nz-footer>
-    <app-footer></app-footer>
+    <app-footer (onScrollBtnClick)="scrollToTop()"></app-footer>
   </nz-footer>
 </nz-layout>

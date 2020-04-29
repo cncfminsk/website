@@ -1,32 +1,110 @@
+//Override `ng-zorro-antd` UI library variables & styles
+
 @import "../node_modules/ng-zorro-antd/ng-zorro-antd.less";
 
-//Overwrite ng-zorro-antd style variables
-@primary-color: #202020;
 @secondary-color: #47529e;
 
-@font-family: "Roboto", sans-serif;
-@font-size-base: 16px;
-@text-color: @primary-color;
+// Base scaffolding variables
 
+@primary-color: #202020;
+@font-family: "Roboto", sans-serif;
+@font-size-base: 1rem;
+@text-color: @primary-color;
 @border-radius-base: 0;
 @border-width-base: 4px;
 @border-color-base: @secondary-color;
 
+// Tabs
+
 @tabs-ink-bar-color: @secondary-color;
-@tabs-horizontal-margin: 0 64px 0 0;
+@tabs-horizontal-margin: 0 3rem 0 0;
+
+.ant-tabs-nav {
+  font-weight: 500;
+}
+
+.ant-tabs-bar {
+  border-bottom: none;
+}
+
+.ant-tabs-ink-bar {
+  height: 4px;
+}
+
+// Layout
 
 @layout-header-background: #f0f5f7;
 @layout-header-height: 145px;
-@layout-header-padding: 0 160px;
-
+@layout-header-padding: 0;
+@layout-body-background: #f0f5f7;
 @layout-footer-background: @primary-color;
-@layout-footer-padding: 56px 160px;
+@layout-footer-padding: 0;
+
+// Buttons
 
 @btn-default-color: @secondary-color;
 @btn-default-bg: @white;
 @btn-primary-color: @white;
 @btn-primary-bg: @secondary-color;
 @btn-font-weight: bold;
-@btn-font-size-lg: 20px;
+@btn-font-size-lg: 1.25rem;
 
-@card-actions-background: @white;
+.ant-btn {
+  box-sizing: content-box;
+}
+
+.ant-btn-primary:focus,
+.ant-btn-primary:active {
+  background-color: @secondary-color;
+  border-color: @secondary-color;
+  color: @white;
+}
+
+.ant-btn-default:focus,
+.ant-btn-default:active {
+  background-color: @white;
+  border-color: @secondary-color;
+  color: @secondary-color;
+}
+
+// Card
+
+@card-padding-base: 0;
+
+.ant-card-body {
+  width: 100%;
+}
+
+.ant-card-meta {
+  height: 100%;
+  margin: 0;
+}
+
+.ant-card-meta-detail {
+  height: 100%;
+}
+
+.ant-card-meta-title {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: @primary-color;
+  font-weight: bold;
+}
+
+.ant-card-meta-description {
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: @primary-color;
+}
+
+// List
+
+.ant-list {
+  color: #ffffff;
+}
+
+.ant-list-header {
+  text-align: start;
+  font-weight: bold;
+  padding-top: 0;
+}

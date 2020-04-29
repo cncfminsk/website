@@ -1,46 +1,82 @@
 .layout-content-registration {
-  padding: 32px 160px 74px 160px;
+  padding: 2rem 10rem 4.5rem 10rem;
   background-color: #f0f5f7;
 }
 
 .layout-content-registration-card {
   width: 100%;
-  min-height: 590px;
-  padding: 80px;
+  min-height: 600px;
+  padding: 5rem;
   background-color: #47529e;
   color: #ffffff;
   flex-direction: column;
 }
 
-.registration-card-button {
-  padding: 25px 45px;
-  min-height: 80px;
+.registration-card-btn {
+  padding: 1.5rem 2.8rem;
 }
 
 .registration-card-date {
   font-family: "Open Sans", sans-serif;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .registration-card-title {
   font-weight: bold;
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
 }
 
 .registration-card-description {
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
-  margin-bottom: 55px;
+  font-size: 1.25rem;
+  margin-bottom: 3.5rem;
 }
 
 .registration-card-image-container {
   width: 100%;
-  height: 800px;
   overflow: hidden;
 }
 
 .registration-card-image {
   width: 100%;
-  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .layout-content-registration {
+    padding: 2rem 6rem 4rem 6rem;
+  }
+
+  .layout-content-registration-card {
+    padding: 3rem;
+    min-height: 400px;
+  }
+
+  .registration-card-image {
+    min-height: 550px;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .registration-card-title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1680px) {
+  .layout-content-registration-card {
+    padding: 4rem;
+    min-height: 500px;
+  }
+
+  .registration-card-image {
+    min-height: 650px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .registration-card-image {
+    max-height: 800px;
+  }
 }

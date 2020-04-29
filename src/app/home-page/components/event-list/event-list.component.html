@@ -4,67 +4,76 @@
   </div>
   <div class="layout-content-events-filter" nz-row nzType="flex">
     <button
-      *ngIf="(masterclassData | async)?.length > 0"
-      class="layout-content-events-filter-button"
+      *ngIf="(masterclassData$ | async)?.length > 0"
+      class="layout-content-events-filter-btn"
       nz-button
-      nzSize="large"
+      nzSize="small"
       [nzType]="filterActive === masterclassTitle ? 'primary' : 'default'"
-      (click)="onFilterEventData(masterclassTitle)"
+      (click)="onFilterData(masterclassTitle)"
     >
       {{ masterclassTitle | uppercase }}
     </button>
     <button
-      *ngIf="(meetupData | async)?.length > 0"
-      class="layout-content-events-filter-button"
+      *ngIf="(meetupData$ | async)?.length > 0"
+      class="layout-content-events-filter-btn"
       nz-button
-      nzSize="large"
+      nzSize="small"
       [nzType]="filterActive === meetupTitle ? 'primary' : 'default'"
-      (click)="onFilterEventData(meetupTitle)"
+      (click)="onFilterData(meetupTitle)"
     >
       {{ meetupTitle | uppercase }}
     </button>
     <button
-      *ngIf="(digestData | async)?.length > 0"
-      class="layout-content-events-filter-button"
+      *ngIf="(digestData$ | async)?.length > 0"
+      class="layout-content-events-filter-btn"
       nz-button
-      nzSize="large"
+      nzSize="small"
       [nzType]="filterActive === digestTitle ? 'primary' : 'default'"
-      (click)="onFilterEventData(digestTitle)"
+      (click)="onFilterData(digestTitle)"
     >
       {{ digestTitle | uppercase }}
     </button>
   </div>
-  <div class="layout-content-events-list" nz-row>
-    <ng-container *ngFor="let data of filteredData | async; index as i">
+  <div class="layout-content-events-list">
+    <ng-container *ngFor="let data of filteredData$ | async">
       <div nz-col nzSpan="8">
-        <div
-          nz-row
-          nzType="flex"
-          [nzJustify]="i === 0 ? 'start' : i === 1 ? 'center' : 'end'"
-        >
+        <div class="layout-content-events-item-container" nz-row nzType="flex">
           <nz-card
-            style="width:80%;"
-            nzHoverable
+            class="layout-content-events-item"
             [nzBordered]="false"
             [nzCover]="coverTemplate"
-            [nzActions]="[actionClick]"
           >
             <nz-card-meta
-              [nzTitle]="data?.title | uppercase"
+              [nzTitle]="data?.filter | uppercase"
               [nzDescription]="descriptionTemplate"
             ></nz-card-meta>
           </nz-card>
           <ng-template #coverTemplate>
-            <img alt="event" [src]="data?.imageUrl" />
+            <img
+              class="layout-content-events-item-image"
+              [src]="data?.imageUrl"
+              alt="event"
+            />
           </ng-template>
           <ng-template #descriptionTemplate>
-            <p>
-              {{ data?.date | date: "dd-MM-yyyy" }}
-            </p>
-            <p>{{ data?.description }}</p>
-          </ng-template>
-          <ng-template #actionClick>
-            <app-arrow-right-icon></app-arrow-right-icon>
+            <p
+              class="layout-content-events-item-description"
+              nz-paragraph
+              nzEllipsis
+              [nzEllipsisRows]="2"
+              [nzContent]="data?.description"
+            ></p>
+            <div
+              nz-row
+              nzType="flex"
+              nzAlign="middle"
+              nzJustify="space-between"
+            >
+              <div class="layout-content-events-item-date">
+                {{ data?.date | date: "EEEE, d MMMM, y" | uppercase }}
+              </div>
+              <app-arrow-right-icon></app-arrow-right-icon>
+            </div>
           </ng-template>
         </div>
       </div>
