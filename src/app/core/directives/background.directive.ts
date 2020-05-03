@@ -12,13 +12,20 @@ export class BackgroundDirective implements OnInit {
   ngOnInit(): void {
     this.renderer.setStyle(
       this.elementRef.nativeElement,
-      "background-image",
+      "background",
       `${
         this.gradientColor
           ? `linear-gradient(${this.gradientColor} 0%, ${this.gradientColor} 100%),`
           : ""
       }
-      url(${this.imageUrl})`
+      url(${this.imageUrl})
+      no-repeat`
+    );
+
+    this.renderer.setStyle(
+      this.elementRef.nativeElement,
+      "background-size",
+      "cover"
     );
   }
 }

@@ -2,7 +2,7 @@
   "eventForRegistration": {
     "date": "2020-05-17",
     "title": "Мелочь, а приятно: жизнь прекрасна",
-    "description": "Товарищи! Новая модель организационной деятельности требуют определения и уточнения соответствующий условий активизации.",
+    "detailDescription": "Товарищи! Новая модель организационной деятельности требуют определения и уточнения соответствующий условий активизации.",
     "imageUrl": "/assets/images/registration-picture.png"
   },
   "masterlassEvents": [
@@ -10,65 +10,155 @@
       "date": "2020-09-11",
       "filter": "Мастер-класс",
       "title": "Высококачественный прототип будущего проекта связывает нас",
-      "description": "Прототип нового сервиса - это как глас грядущего поколения",
+      "briefDescription": "Прототип нового сервиса - это как глас грядущего поколения",
       "imageUrl": "/assets/images/event-picture.png"
     },
     {
       "date": "2020-12-11",
       "filter": "Мастер-класс",
       "title": "Высококачественный прототип будущего проекта связывает нас",
-      "description": "Британские ученые заявили, что прототип - не панацея",
+      "briefDescription": "Британские ученые заявили, что прототип - не панацея",
       "imageUrl": "/assets/images/event-picture.png"
     },
     {
       "date": "2019-12-11",
       "title": "Господа, солнечных дней всё меньше!",
-      "description": "Британские ученые заявили, что прототип - не панацея",
+      "detailDescription": "Выдача дипломов была делом чисто формальным. Уже к третьему заданию он сверстал себе сайт, на котором каждый желающий мог узнать, что Юрочку зовут Юрочкой, что он дизайнер, что он работает по методологии lean sprint ahead и — главное! — что он, Юрочка, никогда не берется за работу, не поняв предварительно задачи.",
       "imageUrl": "/assets/images/event-picture.png",
-      "speakers": [
+      "topics": [
         {
-          "name": "Андрей Воздвиженов",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
+          "speaker": {
+            "name": "Андрей Воздвиженов",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "Fitbit",
+            "position": "Engineering Manager"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         },
         {
-          "name": "Наталья Преображенская",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Выдача дипломов была делом чисто формальным.",
+          "speaker": {
+            "name": "Наталья Преображенская",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "EPAM",
+            "position": "Designer"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         },
         {
-          "name": "Ольга Воробьева",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
+          "speaker": {
+            "name": "Ольга Воробьева",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "EPAM",
+            "position": "Delivery Manager"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         },
         {
-          "name": "Василий Кожемякин",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Выдача дипломов была делом чисто формальным.",
+          "speaker": {
+            "name": "Василий Кожемякин",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "EPAM",
+            "position": "Designer"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         },
         {
-          "name": "Степан Алекссевич",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
+          "speaker": {
+            "name": "Степан Алекссевич",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "EPAM",
+            "position": "Delivery Manager"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         }
       ]
     },
     {
       "date": "2019-07-11",
       "title": "Господа, солнечных дней всё меньше!",
-      "description": "Британские ученые заявили, что прототип - не панацея",
+      "detailDescription": "Выдача дипломов была делом чисто формальным. Уже к третьему заданию он сверстал себе сайт, на котором каждый желающий мог узнать, что Юрочку зовут Юрочкой, что он дизайнер, что он работает по методологии lean sprint ahead и — главное! — что он, Юрочка, никогда не берется за работу, не поняв предварительно задачи.",
       "imageUrl": "/assets/images/event-picture.png",
-      "speakers": [
+      "topics": [
         {
-          "name": "Ольга Воробьева",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
+          "speaker": {
+            "name": "Андрей Воздвиженов",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "Fitbit",
+            "position": "Engineering Manager"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         },
         {
-          "name": "Андрей Воздвиженов",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Выдача дипломов была делом чисто формальным.",
+          "speaker": {
+            "name": "Наталья Преображенская",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "EPAM",
+            "position": "Designer"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         },
         {
-          "name": "Наталья Преображенская",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
+          "speaker": {
+            "name": "Ольга Воробьева",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "EPAM",
+            "position": "Delivery Manager"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         },
         {
-          "name": "Елизавета Никоноровна",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Выдача дипломов была делом чисто формальным.",
+          "speaker": {
+            "name": "Елизавета Никоноровна",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "EPAM",
+            "position": "Designer"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         }
       ]
     }
@@ -78,68 +168,148 @@
       "date": "2020-05-25",
       "filter": "Встреча",
       "title": "Высококачественный прототип будущего проекта связывает нас",
-      "description": "Британские ученые заявили, что прототип - не панацея",
+      "briefDescription": "Британские ученые заявили, что прототип - не панацея",
       "imageUrl": "/assets/images/event-picture.png"
     },
     {
       "date": "2020-06-27",
       "filter": "Встреча",
       "title": "Высококачественный прототип будущего проекта связывает нас",
-      "description": "Прототип нового сервиса - это как глас грядущего поколения",
+      "briefDescription": "Прототип нового сервиса - это как глас грядущего поколения",
       "imageUrl": "/assets/images/event-picture.png"
     },
     {
       "date": "2020-08-29",
       "filter": "Встреча",
       "title": "Высококачественный прототип будущего проекта связывает нас",
-      "description": "Высококачественный прототип будущего проекта связывает нас",
+      "briefDescription": "Высококачественный прототип будущего проекта связывает нас",
       "imageUrl": "/assets/images/event-picture.png"
     },
     {
       "date": "2019-04-25",
       "title": "Базовый вектор развития развеял последние сомнения",
-      "description": "Британские ученые заявили, что прототип - не панацея",
+      "detailDescription": "Выдача дипломов была делом чисто формальным. Уже к третьему заданию он сверстал себе сайт, на котором каждый желающий мог узнать, что Юрочку зовут Юрочкой, что он дизайнер, что он работает по методологии lean sprint ahead и — главное! — что он, Юрочка, никогда не берется за работу, не поняв предварительно задачи.",
       "imageUrl": "/assets/images/event-picture.png",
-      "speakers": [
+      "topics": [
         {
-          "name": "Ольга Воробьева",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
+          "speaker": {
+            "name": "Андрей Воздвиженов",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "Fitbit",
+            "position": "Engineering Manager"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         },
         {
-          "name": "Андрей Воздвиженов",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
+          "speaker": {
+            "name": "Ольга Воробьева",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "EPAM",
+            "position": "Delivery Manager"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         }
       ]
     },
     {
       "date": "2019-01-27",
       "title": "Базовый вектор развития развеял последние сомнения",
-      "description": "Прототип нового сервиса - это как глас грядущего поколения",
+      "detailDescription": "Выдача дипломов была делом чисто формальным. Уже к третьему заданию он сверстал себе сайт, на котором каждый желающий мог узнать, что Юрочку зовут Юрочкой, что он дизайнер, что он работает по методологии lean sprint ahead и — главное! — что он, Юрочка, никогда не берется за работу, не поняв предварительно задачи.",
       "imageUrl": "/assets/images/event-picture.png",
-      "speakers": [
+      "topics": [
         {
-          "name": "Ольга Воробьева",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
+          "speaker": {
+            "name": "Ольга Воробьева",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "EPAM",
+            "position": "Delivery Manager"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         },
         {
-          "name": "Андрей Воздвиженов",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
+          "speaker": {
+            "name": "Андрей Воздвиженов",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "Fitbit",
+            "position": "Engineering Manager"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         },
         {
-          "name": "Наталья Преображенская",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Выдача дипломов была делом чисто формальным.",
+          "speaker": {
+            "name": "Наталья Преображенская",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "EPAM",
+            "position": "Designer"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         },
         {
-          "name": "Ольга Котова",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
+          "speaker": {
+            "name": "Ольга Котова",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "EPAM",
+            "position": "Designer"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         },
         {
-          "name": "Игорь Сергеев",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Выдача дипломов была делом чисто формальным.",
+          "speaker": {
+            "name": "Игорь Сергеев",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "EPAM",
+            "position": "Delivery Manager"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         },
         {
-          "name": "Андрей Воздвиженов",
-          "avatarUrl": "/assets/images/avatar.png"
+          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
+          "speaker": {
+            "name": "Андрей Воздвиженов",
+            "avatarUrl": "/assets/images/avatar.png",
+            "company": "Fitbit",
+            "position": "Engineering Manager"
+          },
+          "links": {
+            "video": "https://www.cncf.io/",
+            "photo": "https://www.cncf.io/",
+            "presentation": "https://www.cncf.io/"
+          }
         }
       ]
     }
@@ -147,7 +317,6 @@
   "mainDigestArticle": {
     "date": "2020-05-17",
     "title": "Базовый вектор развития развеял последние сомнения",
-    "description": "Прототип нового сервиса - это как глас грядущего поколения",
     "imageUrl": "/assets/images/main-article-picture.png",
     "author": {
       "name": "Андрей Молотов",
@@ -159,7 +328,7 @@
       "date": "2020-05-06",
       "filter": "Дайджест",
       "title": "Только прототип - не панацея",
-      "description": "Высококачественный прототип будущего проекта связывает нас",
+      "briefDescription": "Высококачественный прототип будущего проекта связывает нас",
       "imageUrl": "/assets/images/article-picture.png",
       "author": {
         "name": "Илья Петров",
@@ -170,7 +339,7 @@
       "date": "2020-05-10",
       "filter": "Дайджест",
       "title": "Господа, солнечных дней всё меньше!",
-      "description": "Прототип нового сервиса - это как глас грядущего поколения",
+      "briefDescription": "Прототип нового сервиса - это как глас грядущего поколения",
       "imageUrl": "/assets/images/article-picture.png",
       "author": {
         "name": "Татьяна Васильева",
@@ -181,7 +350,7 @@
       "date": "2020-08-06",
       "filter": "Дайджест",
       "title": "Господа, солнечных дней всё меньше!",
-      "description": "Высококачественный прототип будущего проекта связывает нас",
+      "briefDescription": "Высококачественный прототип будущего проекта связывает нас",
       "imageUrl": "/assets/images/article-picture.png",
       "author": {
         "name": "Марфа Ивановна",
@@ -192,7 +361,7 @@
       "date": "2020-07-06",
       "filter": "Дайджест",
       "title": "Благородные стремления не спасут: кровь стынет в жилах",
-      "description": "Британские ученые заявили, что прототип - не панацея",
+      "briefDescription": "Британские ученые заявили, что прототип - не панацея",
       "imageUrl": "/assets/images/article-picture.png",
       "author": {
         "name": "Игорь Сергеев",

@@ -4,7 +4,10 @@
 <ng-template #coverTemplate>
   <div class="event-card-header">
     <img class="event-card-image" [src]="eventData?.imageUrl" alt="article" />
-    <app-arrow-bg-icon class="event-card-btn"></app-arrow-bg-icon>
+    <app-arrow-bg-icon
+      class="event-card-btn"
+      (click)="showModal()"
+    ></app-arrow-bg-icon>
   </div>
 </ng-template>
 <ng-template #descriptionTemplate>
@@ -16,20 +19,20 @@
       <p class="event-card-description-title">{{ eventData?.title }}</p>
     </div>
     <div
-      #authorList
-      class="event-card-description-author-list"
+      #speakerList
+      class="event-card-description-speaker-list"
       nz-row
       nzType="flex"
     >
-      <ng-container *ngFor="let speaker of eventData.speakers">
+      <ng-container *ngFor="let topic of eventData.topics">
         <div nz-row nzType="flex">
           <nz-avatar
-            class="event-card-description-author-avatar"
-            [nzText]="speaker?.name.slice(0, 2) | uppercase"
-            [nzSrc]="speaker?.avatarUrl"
+            class="event-card-description-speaker-avatar"
+            [nzText]="topic?.speaker.name.slice(0, 2) | uppercase"
+            [nzSrc]="topic?.speaker.avatarUrl"
           ></nz-avatar>
-          <div class="event-card-description-author-name">
-            {{ speaker?.name }}
+          <div class="event-card-description-speaker-name">
+            {{ topic?.speaker.name }}
           </div>
         </div>
         <ng-container #ellipsisContainer></ng-container>
@@ -40,3 +43,8 @@
 <ng-template #ellipsisTemplate>
   <div class="ellipsis">...</div>
 </ng-template>
+<app-event-modal
+  [eventData]="eventData"
+  [isVisible]="isModalVisible"
+  (onCloseModal)="closeModal()"
+></app-event-modal>
