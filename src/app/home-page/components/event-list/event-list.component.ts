@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { DataService } from "src/app/core/services/data.service";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
-import { IEvent, IFilterGroupData } from "../../../core/models/Data";
+import { IEvent, IFilterGroupData, IArticle } from "../../../core/models/Data";
 
 const MEETUP_DATA = {
   id: "meetupEvents",
@@ -36,9 +36,9 @@ export class EventListComponent implements OnInit {
   private initialData$: Observable<IFilterGroupData[]>;
   public meetupData$: Observable<IEvent[]>;
   public masterclassData$: Observable<IEvent[]>;
-  public digestData$: Observable<IEvent[]>;
-  private defaultData$: Observable<IEvent[]>;
-  public filteredData$: Observable<IEvent[]>;
+  public digestData$: Observable<IArticle[]>;
+  private defaultData$: Observable<(IArticle | IEvent)[]>;
+  public filteredData$: Observable<(IArticle | IEvent)[]>;
 
   private filterInitialData(
     initialData$: Observable<IFilterGroupData[]>
@@ -60,7 +60,7 @@ export class EventListComponent implements OnInit {
   private getFilterGroupDataById(
     initialData$: Observable<IFilterGroupData[]>,
     id: string
-  ): Observable<IEvent[]> {
+  ): Observable<(IArticle | IEvent)[]> {
     return initialData$.pipe(
       map((initialData) => {
         const [group] = initialData.filter((x) => x.id === id);
@@ -71,7 +71,7 @@ export class EventListComponent implements OnInit {
 
   private getDataByDefault(
     initialData$: Observable<IFilterGroupData[]>
-  ): Observable<IEvent[]> {
+  ): Observable<(IArticle | IEvent)[]> {
     return initialData$.pipe(
       map((initialData) =>
         initialData
@@ -84,7 +84,7 @@ export class EventListComponent implements OnInit {
     );
   }
 
-  private getFilterData(data$: Observable<IEvent[]>) {
+  private getFilterData(data$: Observable<(IArticle | IEvent)[]>) {
     return data$.pipe(map((data) => data.slice(0, 3)));
   }
 

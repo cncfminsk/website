@@ -9,6 +9,7 @@
 @primary-color: #202020;
 @font-family: "Roboto", sans-serif;
 @font-size-base: 1rem;
+@line-height-base: 1.8;
 @text-color: @primary-color;
 @border-radius-base: 0;
 @border-width-base: 4px;
@@ -107,4 +108,18 @@
   text-align: start;
   font-weight: bold;
   padding-top: 0;
+}
+
+// Modal
+
+@modal-body-padding: 0;
+@modal-mask-bg: rgba(32, 32, 32, 0.6);
+
+.ant-modal {
+  top: 10vh;
+}
+
+.ant-modal-close-x {
+  font-size: 1.3rem;
+  color: @primary-color;
 }

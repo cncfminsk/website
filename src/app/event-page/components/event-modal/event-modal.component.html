@@ -1,0 +1,96 @@
+<nz-modal
+  [(nzVisible)]="isVisible"
+  nzWidth="70%"
+  [nzContent]="modalContent"
+  [nzFooter]="null"
+  (nzOnCancel)="onCloseModal.emit()"
+>
+  <ng-template #modalContent>
+    <div class="modal-content" nz-row>
+      <div nz-col nzSpan="11">
+        <div
+          class="modal-content-base-info"
+          nz-row
+          nzType="flex"
+          [appBackground]="eventData.imageUrl || ''"
+        >
+          <div class="base-info-container" nz-row nzType="flex">
+            <div class="base-info-date">
+              {{ eventData.date | date: "EEEE, d MMMM, y" | uppercase }}
+            </div>
+            <div class="base-info-title">
+              {{ eventData.title }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div nz-col nzSpan="13">
+        <ng-scrollbar track="vertical" visibility="hover">
+          <div class="modal-content-detail-info" nz-row nzType="flex">
+            <div class="detail-info-description">
+              <div>{{ eventData.detailDescription }}</div>
+              <nz-divider></nz-divider>
+            </div>
+            <div class="detail-info-topic-list-header">
+              {{ "Доклады" | uppercase }}
+            </div>
+            <div class="detail-info-topic-list" nz-row nzType="flex">
+              <div
+                *ngFor="let topic of eventData.topics"
+                class="detail-info-topic-item"
+                nz-row
+                nzType="flex"
+              >
+                <div
+                  class="topic-item-speaker"
+                  nz-row
+                  nzType="flex"
+                  nzAlign="middle"
+                >
+                  <nz-avatar
+                    class="topic-item-speaker-avatar"
+                    [nzText]="topic.speaker.name.slice(0, 2) | uppercase"
+                    [nzSrc]="topic.speaker.avatarUrl"
+                  ></nz-avatar>
+                  <div class="topic-item-speaker-info" nz-row nzType="flex">
+                    <div class="speaker-info-name">
+                      {{ topic.speaker.name }}
+                    </div>
+                    <div class="speaker-info-job">
+                      {{
+                        topic.speaker.position + ", " + topic.speaker.company
+                      }}
+                    </div>
+                  </div>
+                </div>
+                <div class="topic-item-title">
+                  {{ topic.title }}
+                </div>
+                <div *ngIf="topic.links" nz-row nzType="flex">
+                  <a
+                    class="topic-item-link"
+                    [href]="topic.links.photo"
+                    target="_blank"
+                    >{{ "Фото" | uppercase }}
+                  </a>
+                  <a
+                    class="topic-item-link"
+                    [href]="topic.links.video"
+                    target="_blank"
+                    >{{ "Видео" | uppercase }}
+                  </a>
+                  <a
+                    class="topic-item-link"
+                    [href]="topic.links.presentation"
+                    target="_blank"
+                    >{{ "Презентация" | uppercase }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-scrollbar>
+      </div>
+    </div>
+  </ng-template>
+</nz-modal>

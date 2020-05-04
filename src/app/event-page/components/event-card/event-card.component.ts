@@ -13,7 +13,7 @@ import {
 import { IEvent } from "../../../core/models/Data";
 
 const ELLIPSIS_WIDTH = 20;
-const AUTHOR_LIST_VIEW_ROWS = 2;
+const SPEAKER_LIST_VIEW_ROWS = 2;
 
 @Component({
   selector: "app-event-card",
@@ -23,17 +23,18 @@ const AUTHOR_LIST_VIEW_ROWS = 2;
 export class EventCardComponent implements AfterViewInit {
   @Input() eventData: IEvent;
 
-  @HostListener("window:resize", ["$event.target"])
+  @HostListener("window:resize")
   onResize() {
     this.updateEllipsisPosition();
   }
 
-  @ViewChild("authorList", { read: ElementRef }) authorList: ElementRef;
+  @ViewChild("speakerList", { read: ElementRef }) speakerList: ElementRef;
   @ViewChild("ellipsisTemplate") ellipsisTemplate: TemplateRef<any>;
   @ViewChildren("ellipsisContainer", { read: ViewContainerRef })
   ellipsisContainer: QueryList<ViewContainerRef>;
 
   private currentIndex: number = 0;
+  public isModalVisible: boolean = false;
 
   private findLastVisibleElementIndex(
     container: ElementRef,
@@ -65,7 +66,7 @@ export class EventCardComponent implements AfterViewInit {
           containerNodesWidth[i + 1] >
         containerWidth
       ) {
-        if (currentContainerRow < AUTHOR_LIST_VIEW_ROWS) {
+        if (currentContainerRow < SPEAKER_LIST_VIEW_ROWS) {
           currentContainerRow += 1;
           accumulatedWidthSum = 0;
         } else {
@@ -85,7 +86,7 @@ export class EventCardComponent implements AfterViewInit {
   private updateEllipsisPosition(): void {
     setTimeout(() => {
       const index = this.findLastVisibleElementIndex(
-        this.authorList,
+        this.speakerList,
         this.currentIndex
       );
 
@@ -108,6 +109,14 @@ export class EventCardComponent implements AfterViewInit {
 
       this.currentIndex = index;
     }, 100);
+  }
+
+  public showModal(): void {
+    this.isModalVisible = true;
+  }
+
+  public closeModal(): void {
+    this.isModalVisible = false;
   }
 
   ngAfterViewInit() {
