@@ -222,93 +222,37 @@
       ]
     },
     {
-      "date": "2019-01-27",
-      "title": "Базовый вектор развития развеял последние сомнения",
-      "detailDescription": "Выдача дипломов была делом чисто формальным. Уже к третьему заданию он сверстал себе сайт, на котором каждый желающий мог узнать, что Юрочку зовут Юрочкой, что он дизайнер, что он работает по методологии lean sprint ahead и — главное! — что он, Юрочка, никогда не берется за работу, не поняв предварительно задачи.",
+      "date": "2019-08-21",
+      "title": "Знакомьтесь, Д̶ж̶о̶ ̶Б̶л̶э̶к Google Cloud AutoML",
+      "detailDescription": "Наш первый митап о теории и практике машинного обучения и о том, как, имея натренированную сеть искусственного интеллекта в облаках, врач больницы может с легкостью распознать пневмонию даже на самых ранних этапах.",
       "imageUrl": "/assets/images/event-picture.png",
       "topics": [
         {
-          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
+          "title": "Введение в AI. Основы ML.",
           "speaker": {
-            "name": "Ольга Воробьева",
-            "avatarUrl": "/assets/images/avatar.png",
+            "name": "Александра Зенченко",
+            "avatarUrl": "/assets/images/speaker_avatars/alexandra_zenchenko.png",
+            "company": "EPAM",
+            "position": "Lead Software Engineer"
+          },
+          "links": {
+            "video": "https://www.youtube.com/watch?v=B_oCpTvME40/",
+            "photo": "https://photos.app.goo.gl/kQYpejKKpVibJV4r5",
+            "presentation": "https://docs.google.com/presentation/d/10TGWpKMA-coo3k6i_Gvrv4Wg2p_by9XDVLCh4TsnC5E/edit#slide=id.g5fd04fdea2_0_188"
+          }
+        },
+        {
+          "title": "Технологии для автоматического создания ML модели",
+          "speaker": {
+            "name": "Светлана Панамаренко",
+            "avatarUrl": "/assets/images/speaker_avatars/sveta.jpg",
             "company": "EPAM",
             "position": "Delivery Manager"
           },
           "links": {
-            "video": "https://www.cncf.io/",
-            "photo": "https://www.cncf.io/",
-            "presentation": "https://www.cncf.io/"
-          }
-        },
-        {
-          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
-          "speaker": {
-            "name": "Андрей Воздвиженов",
-            "avatarUrl": "/assets/images/avatar.png",
-            "company": "Fitbit",
-            "position": "Engineering Manager"
-          },
-          "links": {
-            "video": "https://www.cncf.io/",
-            "photo": "https://www.cncf.io/",
-            "presentation": "https://www.cncf.io/"
-          }
-        },
-        {
-          "title": "Выдача дипломов была делом чисто формальным.",
-          "speaker": {
-            "name": "Наталья Преображенская",
-            "avatarUrl": "/assets/images/avatar.png",
-            "company": "EPAM",
-            "position": "Designer"
-          },
-          "links": {
-            "video": "https://www.cncf.io/",
-            "photo": "https://www.cncf.io/",
-            "presentation": "https://www.cncf.io/"
-          }
-        },
-        {
-          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
-          "speaker": {
-            "name": "Ольга Котова",
-            "avatarUrl": "/assets/images/avatar.png",
-            "company": "EPAM",
-            "position": "Designer"
-          },
-          "links": {
-            "video": "https://www.cncf.io/",
-            "photo": "https://www.cncf.io/",
-            "presentation": "https://www.cncf.io/"
-          }
-        },
-        {
-          "title": "Выдача дипломов была делом чисто формальным.",
-          "speaker": {
-            "name": "Игорь Сергеев",
-            "avatarUrl": "/assets/images/avatar.png",
-            "company": "EPAM",
-            "position": "Delivery Manager"
-          },
-          "links": {
-            "video": "https://www.cncf.io/",
-            "photo": "https://www.cncf.io/",
-            "presentation": "https://www.cncf.io/"
-          }
-        },
-        {
-          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
-          "speaker": {
-            "name": "Андрей Воздвиженов",
-            "avatarUrl": "/assets/images/avatar.png",
-            "company": "Fitbit",
-            "position": "Engineering Manager"
-          },
-          "links": {
-            "video": "https://www.cncf.io/",
-            "photo": "https://www.cncf.io/",
-            "presentation": "https://www.cncf.io/"
+            "video": "https://www.youtube.com/watch?v=B_oCpTvME40/",
+            "photo": "https://photos.app.goo.gl/kQYpejKKpVibJV4r5",
+            "presentation": "https://docs.google.com/presentation/d/10TGWpKMA-coo3k6i_Gvrv4Wg2p_by9XDVLCh4TsnC5E/edit#slide=id.g5fd04fdea2_0_188"
           }
         }
       ]
