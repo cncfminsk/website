@@ -165,6 +165,42 @@
   ],
   "meetupEvents": [
     {
+      "date": "2019-09-02",
+      "title": "Infrastructure as Code",
+      "detailDescription": "Митап где мы говорили о о Terraform и Serverless. Андрей Татаранович рассказывал о шагах, которые он проделал на пути от ручной работы до автоматизации развертывания облачной инфраструктуры на базе Terraform. Дмитрий Рендов делился знаниями о том как безболезненно создавать серверлесс инфраструктуру в AWS облаке, используя оба инструмента одновремeнно.",
+      "imageUrl": "/assets/images/event-picture.png",
+      "topics": [
+        {
+          "title": "Reproducible environments",
+          "speaker": {
+            "name": "Андрей Татаранович",
+            "avatarUrl": "src/assets/images/speaker_avatars/Andrei_Tatranovich.jpg",
+            "company": "EPAM",
+            "position": "Lead Systems Engineer"
+          },
+          "links": {
+            "video": "https://www.youtube.com/watch?v=WrQMPHDG39k&list=PLwjWMHa5_FX_x2be1CzbFHEONA2l4PyGw&index=2",
+            "photo": "https://photos.app.goo.gl/LGML4qxN8zFsmtzK6",
+            "presentation": "https://docs.google.com/presentation/d/1iXiT1b3CcymmJzMsbjXtUDJO-GB1scx5sfMvfbAJxrg/edit?usp=sharing"
+          }
+        },
+        {
+          "title": "Serverless и Terraform – 2 сапога пара",
+          "speaker": {
+            "name": "Дмитрий Рендов",
+            "avatarUrl": "src/assets/images/speaker_avatars/Dmitry_Rendov.jpg",
+            "company": "EPAM",
+            "position": "Lead Software Engineer"
+          },
+          "links": {
+            "video": "https://www.youtube.com/watch?v=VIYwqPPgjTs&t=1s",
+            "photo": "https://photos.app.goo.gl/LGML4qxN8zFsmtzK6",
+            "presentation": "https://docs.google.com/presentation/d/1tRjBglUf726BqRHXG_2hcP4WCdlmqWR3k2GFIA9seZM/edit#slide=id.g62d47f511a_2_32"
+          }
+        }
+      ]
+    },
+    {
       "date": "2019-08-21",
       "title": "Знакомьтесь, Д̶ж̶о̶ ̶Б̶л̶э̶к Google Cloud AutoML",
       "detailDescription": "Наш первый митап о теории и практике машинного обучения и о том, как, имея натренированную сеть искусственного интеллекта в облаках, врач больницы может с легкостью распознать пневмонию даже на самых ранних этапах.",
