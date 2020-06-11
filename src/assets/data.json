@@ -165,63 +165,6 @@
   ],
   "meetupEvents": [
     {
-      "date": "2020-05-25",
-      "filter": "Встреча",
-      "title": "Высококачественный прототип будущего проекта связывает нас",
-      "briefDescription": "Британские ученые заявили, что прототип - не панацея",
-      "imageUrl": "/assets/images/event-picture.png"
-    },
-    {
-      "date": "2020-06-27",
-      "filter": "Встреча",
-      "title": "Высококачественный прототип будущего проекта связывает нас",
-      "briefDescription": "Прототип нового сервиса - это как глас грядущего поколения",
-      "imageUrl": "/assets/images/event-picture.png"
-    },
-    {
-      "date": "2020-08-29",
-      "filter": "Встреча",
-      "title": "Высококачественный прототип будущего проекта связывает нас",
-      "briefDescription": "Высококачественный прототип будущего проекта связывает нас",
-      "imageUrl": "/assets/images/event-picture.png"
-    },
-    {
-      "date": "2019-04-25",
-      "title": "Базовый вектор развития развеял последние сомнения",
-      "detailDescription": "Выдача дипломов была делом чисто формальным. Уже к третьему заданию он сверстал себе сайт, на котором каждый желающий мог узнать, что Юрочку зовут Юрочкой, что он дизайнер, что он работает по методологии lean sprint ahead и — главное! — что он, Юрочка, никогда не берется за работу, не поняв предварительно задачи.",
-      "imageUrl": "/assets/images/event-picture.png",
-      "topics": [
-        {
-          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
-          "speaker": {
-            "name": "Андрей Воздвиженов",
-            "avatarUrl": "/assets/images/avatar.png",
-            "company": "Fitbit",
-            "position": "Engineering Manager"
-          },
-          "links": {
-            "video": "https://www.cncf.io/",
-            "photo": "https://www.cncf.io/",
-            "presentation": "https://www.cncf.io/"
-          }
-        },
-        {
-          "title": "Юрочка проснулся в прекрасном настроении. Вдев ноги в тапки, он пошел на кухню — делать чай.",
-          "speaker": {
-            "name": "Ольга Воробьева",
-            "avatarUrl": "/assets/images/avatar.png",
-            "company": "EPAM",
-            "position": "Delivery Manager"
-          },
-          "links": {
-            "video": "https://www.cncf.io/",
-            "photo": "https://www.cncf.io/",
-            "presentation": "https://www.cncf.io/"
-          }
-        }
-      ]
-    },
-    {
       "date": "2019-08-21",
       "title": "Знакомьтесь, Д̶ж̶о̶ ̶Б̶л̶э̶к Google Cloud AutoML",
       "detailDescription": "Наш первый митап о теории и практике машинного обучения и о том, как, имея натренированную сеть искусственного интеллекта в облаках, врач больницы может с легкостью распознать пневмонию даже на самых ранних этапах.",
