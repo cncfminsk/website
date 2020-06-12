@@ -168,7 +168,7 @@
       "date": "2019-09-02",
       "title": "Infrastructure as Code",
       "detailDescription": "Митап где мы говорили о о Terraform и Serverless. Андрей Татаранович рассказывал о шагах, которые он проделал на пути от ручной работы до автоматизации развертывания облачной инфраструктуры на базе Terraform. Дмитрий Рендов делился знаниями о том как безболезненно создавать серверлесс инфраструктуру в AWS облаке, используя оба инструмента одновремeнно.",
-      "imageUrl": "src/assets/images/meetup_banners/Meetup 2.png
+      "imageUrl": "src/assets/images/meetup_banners/Meetup2.png",
       "topics": [
         {
           "title": "Reproducible environments",
@@ -204,7 +204,7 @@
       "date": "2019-08-21",
       "title": "Знакомьтесь, Д̶ж̶о̶ ̶Б̶л̶э̶к Google Cloud AutoML",
       "detailDescription": "Наш первый митап о теории и практике машинного обучения и о том, как, имея натренированную сеть искусственного интеллекта в облаках, врач больницы может с легкостью распознать пневмонию даже на самых ранних этапах.",
-      "imageUrl": "src/assets/images/meetup_banners/Meetup 1.png",
+      "imageUrl": "src/assets/images/meetup_banners/Meetup1.png",
       "topics": [
         {
           "title": "Введение в AI. Основы ML.",
