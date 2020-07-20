@@ -163,7 +163,110 @@
       ]
     }
   ],
-  "meetupEvents": [
+ "meetupEvents": [
+     {
+      "date": "2020-02-29",
+      "title": "Cloud Security",
+      "detailDescription": "Cloud Security Posture Management: Что такое CSPM и для чего используется. Обзор коммерческих и opensourse инструментов. Как это делают в EPAM. Infrastructure as Code Security: Безопасность в IaC. IAC security tools: AWS demo, GCP demo. Проверка Terraform кода для AWS Cloud с итеграцией security code scanning tools в IaC pipeline.",
+      "imageUrl": "/assets/images/meetup_banners/Meetup5.png",
+      "topics": [
+        {
+          "title": "Cloud Security Posture Management",
+          "speaker": {
+            "name": "Александр Слободанюк",
+            "avatarUrl": "/assets/images/speaker_avatars/Aleksandr_Slobodanyuk.jpg",
+            "company": "EPAM",
+            "position": "Senior Security Systems Engineer"
+          },
+          "links": {
+            "video": "https://www.youtube.com/watch?v=zJUtA26wPOM&list=PLwjWMHa5_FX88yf3fapksH9M1OIGM1aNi&index=1",
+            "photo": "https://photos.app.goo.gl/V3eKC6iaHS6Hdxdp9",
+            "presentation": "https://docs.google.com/presentation/d/1Pis_gJp0BzNd-F9hkcnfbN8c04r-tISJwGRDbAMLI9o/edit?usp=sharing"
+          }
+        },
+        {
+          "title": "Infrastructure as Code Security",
+          "speaker": {
+                    "name": "Михаил Юдин",
+            "avatarUrl": "/assets/images/speaker_avatars/Michael_Yudin.jpg",
+            "company": "EPAM",
+            "position": "Senior Security Systems Engineer"
+          },
+          "links": {
+            "video": "https://www.youtube.com/watch?v=EqefeZhcDiE&list=PLwjWMHa5_FX88yf3fapksH9M1OIGM1aNi&index=2",
+            "photo": "https://photos.app.goo.gl/V3eKC6iaHS6Hdxdp9",
+            "presentation": "https://docs.google.com/presentation/d/1Pis_gJp0BzNd-F9hkcnfbN8c04r-tISJwGRDbAMLI9o/edit?usp=sharing"
+          }
+        },
+        {
+          "title": "Infrastructure as Code Security",
+          "speaker": {
+                    "name": "Герман Бабенко",
+            "avatarUrl": "/assets/images/speaker_avatars/German_Babenko.jpg",
+            "company": "EPAM",
+            "position": "Senior Security Systems Engineer"
+          },
+          "links": {
+            "video": "https://www.youtube.com/watch?v=EqefeZhcDiE&list=PLwjWMHa5_FX88yf3fapksH9M1OIGM1aNi&index=2",
+            "photo": "https://photos.app.goo.gl/V3eKC6iaHS6Hdxdp9",
+            "presentation": "https://docs.google.com/presentation/d/1Pis_gJp0BzNd-F9hkcnfbN8c04r-tISJwGRDbAMLI9o/edit?usp=sharing"
+          }
+    },
+    {
+      "date": "2019-11-20",
+      "title": "Containers in Action",
+      "detailDescription": "Мы говорили про POSIX облаков: K8s и построение процессов вокруг него. На примере реальной задачи рассматривали миграцию монолитного Java приложения в Docker и Kubernetes. Разбирали какие именно инструменты современного Kubernetes могут помочь решении в подобного рода задач.",
+       "imageUrl": "/assets/images/meetup_banners/Meetup4.png",
+      "topics": [
+        {
+          "title": "Containerization “Under the Hood”",
+           "speaker": {
+                    "name": "Бронислав Емельянов",
+            "avatarUrl": "/assets/images/speaker_avatars/Bronislav_Emelianov.png",
+            "company": "EPAM",
+            "position": "Lead Systems Engineer"
+           },
+          "links": {
+            "photo": "https://photos.app.goo.gl/UtAmyuBLSnm41CKR9",
+            "presentation": "https://docs.google.com/presentation/d/1b0BeZeHzEEc5B9DUVfsRGWrfIxvvpjfCx_SQvaVai5s/edit?usp=sharing"
+          }
+        },
+        {
+          "title": "Not Recommended but Desirable: Java Monolith & Kubernetes",
+         "speaker": {
+                    "name": "Валерий Безруков",
+            "avatarUrl": "/assets/images/speaker_avatars/Valeriy_Bezrukov.jpg",
+            "company": "EPAM",
+            "position": "Delivery Manager"
+           },
+          "links": {
+            "photo": "https://photos.app.goo.gl/UtAmyuBLSnm41CKR9",
+            "presentation": "https://docs.google.com/presentation/d/1wOqai414K6IGjCBHuW-ZFAgwfD07JIk8iR-JyDSfcFg/edit?usp=sharing"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2019-10-29",
+      "title": "Kubernetes + Cloud Native = Knative!",
+      "detailDescription": "Самое основное, что нужно знать о Knative.",
+      "imageUrl": "/assets/images/meetup_banners/Meetup3.png",
+      "topics": [
+        {
+          "title": "Kubernetes + Cloud Native = Knative!",
+          "speaker": {
+            "name": "Михаил Серченя",
+            "avatarUrl": "/assets/images/speaker_avatars/Michael_Serchenia.png",
+            "company": "EPAM",
+            "position": "Systems Architect"
+          },
+          "links": {
+                      "photo": "https://photos.google.com/u/1/album/AF1QipN63nphuNquyWZoKAwmQIfzabtuL-KYqcf5WsDn",
+            "presentation": "https://docs.google.com/presentation/d/1uqdzIp5akhKPaT2xfYZe_x8wLHcR6rpjH-NQFeM-cjw/edit?usp=sharing"
+          }
+        }
+      ]
+    },
     {
       "date": "2019-09-02",
       "title": "Infrastructure as Code",
@@ -195,7 +298,7 @@
           "links": {
             "video": "https://www.youtube.com/watch?v=VIYwqPPgjTs&t=1s",
             "photo": "https://photos.app.goo.gl/LGML4qxN8zFsmtzK6",
-            "presentation": "https://docs.google.com/presentation/d/1tRjBglUf726BqRHXG_2hcP4WCdlmqWR3k2GFIA9seZM/edit#slide=id.g62d47f511a_2_32"
+            "presentation": "https://docs.google.com/presentation/d/1tRjBglUf726BqRHXG_2hcP4WCdlmqWR3k2GFIA9seZM/edit?usp=sharing"
           }
         }
       ]
@@ -217,7 +320,7 @@
           "links": {
             "video": "https://www.youtube.com/watch?v=B_oCpTvME40/",
             "photo": "https://photos.app.goo.gl/kQYpejKKpVibJV4r5",
-            "presentation": "https://docs.google.com/presentation/d/10TGWpKMA-coo3k6i_Gvrv4Wg2p_by9XDVLCh4TsnC5E/edit#slide=id.g5fd04fdea2_0_188"
+            "presentation": "https://docs.google.com/presentation/d/10TGWpKMA-coo3k6i_Gvrv4Wg2p_by9XDVLCh4TsnC5E/edit?usp=sharing"
           }
         },
         {
@@ -231,7 +334,7 @@
           "links": {
             "video": "https://www.youtube.com/watch?v=B_oCpTvME40/",
             "photo": "https://photos.app.goo.gl/kQYpejKKpVibJV4r5",
-            "presentation": "https://docs.google.com/presentation/d/10TGWpKMA-coo3k6i_Gvrv4Wg2p_by9XDVLCh4TsnC5E/edit#slide=id.g5fd04fdea2_0_188"
+            "presentation": "https://docs.google.com/presentation/d/10TGWpKMA-coo3k6i_Gvrv4Wg2p_by9XDVLCh4TsnC5E/edit?usp=sharing"
           }
         }
       ]
